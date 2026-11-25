@@ -138,7 +138,37 @@
   "Wallapop:0j280xv04ejy:380": "2026-11-25T17:39:09.150187+00:00",
   "Wallapop:w67vm2011w6x:120": "2026-11-25T17:39:09.150187+00:00",
   "Wallapop:8j3871qre7z9:375": "2026-11-25T17:39:09.150187+00:00",
-  "Wallapop:vjrengwkn4zk:390": "2026-11-25T17:39:09.150187+00:00"
+  "Wallapop:vjrengwkn4zk:390": "2026-11-25T17:39:09.150187+00:00",
+  "Wallapop:mzn3rnwx7gjn:600": "2026-11-25T18:13:26.159330+00:00",
+  "Wallapop:0j280vnkddjy:600": "2026-11-25T18:13:26.159330+00:00",
+  "Wallapop:9jdwoy8nv96k:229": "2026-11-25T18:13:26.159330+00:00",
+  "Wallapop:pzpkl0ddemj3:499": "2026-11-25T18:13:26.159330+00:00",
+  "Wallapop:36e53y85dv6d:300": "2026-11-25T18:13:26.159330+00:00",
+  "Wallapop:v6gpdyo2m56e:480": "2026-11-25T18:13:26.159330+00:00",
+  "Wallapop:pj943wnyek6e:470": "2026-11-25T18:13:26.159330+00:00",
+  "Wallapop:e65qxn7y9p6o:139": "2026-11-25T18:13:26.159330+00:00",
+  "Wallapop:nzxe12rl1e62:700": "2026-11-25T18:13:26.159330+00:00",
+  "Wallapop:pj943wnk2m6e:680": "2026-11-25T18:13:26.159330+00:00",
+  "Wallapop:ejkmgyp2nqzx:700": "2026-11-25T18:13:26.159330+00:00",
+  "Wallapop:w67vm0x8x96x:600": "2026-11-25T18:13:26.159330+00:00",
+  "Wallapop:p618pg8rpdz5:150": "2026-11-25T18:13:26.159330+00:00",
+  "Wallapop:wzyrmkr2n565:140": "2026-11-25T18:13:26.159330+00:00",
+  "Wallapop:36e53y5ldq6d:130": "2026-11-25T18:13:26.159330+00:00",
+  "Wallapop:ejkmgymy19zx:650": "2026-11-25T18:13:26.159330+00:00",
+  "Wallapop:pzpkl0kepkj3:150": "2026-11-25T18:13:26.159330+00:00",
+  "Wallapop:vjrenwe5v8zk:750": "2026-11-25T18:13:26.159330+00:00",
+  "Wallapop:nz08ne8okr6o:150": "2026-11-25T18:13:26.159330+00:00",
+  "Wallapop:wzyrmkrp4v65:125": "2026-11-25T18:13:26.159330+00:00",
+  "Wallapop:8j387q89n1z9:750": "2026-11-25T18:13:26.159330+00:00",
+  "Wallapop:v6gpdyoq426e:300": "2026-11-25T18:13:26.159330+00:00",
+  "Wallapop:8j387qpko2z9:365": "2026-11-25T18:13:26.159330+00:00",
+  "Wallapop:nz08ner19e6o:350": "2026-11-25T18:13:26.159330+00:00",
+  "Wallapop:qzmmq57n9gzv:380": "2026-11-25T18:13:26.159330+00:00",
+  "Wallapop:pzpkl0d8ykj3:440": "2026-11-25T18:13:26.159330+00:00",
+  "Wallapop:ejkmgym3dyzx:400": "2026-11-25T18:13:26.159330+00:00",
+  "Wallapop:mzn3rn3qk2jn:380": "2026-11-25T18:13:26.159330+00:00",
+  "Wallapop:p618pg82vgz5:200": "2026-11-25T18:13:26.159330+00:00",
+  "Wallapop:nz08nem1m36o:380": "2026-11-25T18:13:26.159330+00:00"
  },
  "activos": [
   {
@@ -188,6 +218,18 @@
    "ciudad": "Madrid",
    "distancia_km": null,
    "buen_precio": false
+  },
+  {
+   "fuente": "Wallapop",
+   "titulo": "Xbox Series S Blanca",
+   "precio": 200.0,
+   "url": "https://es.wallapop.com/item/xbox-series-s-blanca-1328190955",
+   "entrega": "En mano, 8 km",
+   "visto": "2026-11-25T18:13:26.159330+00:00",
+   "modelo": "Xbox Series S",
+   "ciudad": "Madrid",
+   "distancia_km": 8.072756497258439,
+   "buen_precio": true
   }
  ],
  "fallos": {
