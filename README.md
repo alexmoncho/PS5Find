@@ -1,11 +1,18 @@
 # Rastreador de consolas para GTA VI
 
-Busca cada 30 minutos PS5 (Digital, Slim, Pro) y Xbox Series S/X de segunda mano, filtra las que cumplen los requisitos y manda una notificación al móvil con el enlace al anuncio. La web (`docs/`, publicada con GitHub Pages) se instala en la pantalla de inicio como una app, muestra los anuncios válidos de los últimos 7 días y recibe los avisos.
+Busca cada 30 minutos PS5 (Digital, Estándar, Pro) y Xbox Series S/X de segunda mano, filtra las que cumplen los requisitos y manda una notificación al móvil con el enlace al anuncio. La web (`docs/`, publicada con GitHub Pages) se instala en la pantalla de inicio como una app, muestra los anuncios válidos de los últimos 7 días y recibe los avisos.
 
 ## Filtros
 
 - Modelo: PS5 o Xbox Series. Fuera PS4, Xbox One, PlayStation Portal y accesorios (mandos, fundas, soportes, juegos, cajas).
-- Precio: entre 150 y 400 €. Por debajo de 150 casi siempre es avería o estafa.
+- Precio máximo por modelo (segunda mano entre particulares); por debajo del primer valor se marca como "buen precio":
+  - Xbox Series S: 220–250 €
+  - Xbox Series X: 400–450 €
+  - PS5 Digital: 380–420 €
+  - PS5 Estándar (con lector): 420–460 €
+  - PS5 Pro: 650–750 €
+  - Si el anuncio no dice la edición de PS5 se aplica el máximo de la Digital; si no dice Series S o X, el de la Series S.
+  - Precios anormalmente bajos para el modelo (p. ej. una PS5 Pro por menos de 350 €) se descartan como posible estafa.
 - Estado: bueno, como nuevo o nuevo. Fuera averiadas, "sin probar", para piezas, luz azul, baneadas.
 - Estafas: fuera "foto de la caja", "leer bien", pagos por transferencia/WhatsApp/PayPal amigos, teléfonos en el anuncio.
 - Entrega: en mano a menos de 50 km de Madrid, o con envío y pago protegido de la propia plataforma.

@@ -46,12 +46,13 @@ def cargar_estado():
     return {"vistos": {}, "activos": []}
 
 
-def guardar_web(activos, errores):
+def guardar_web(activos, errores, cfg):
     """Datos que lee la web (docs/index.html): anuncios activos y hora de la última pasada."""
     WEB_DATOS.parent.mkdir(exist_ok=True)
     WEB_DATOS.write_text(json.dumps({
         "actualizado": datetime.now(timezone.utc).isoformat(timespec="seconds"),
         "portales_con_error": errores,
+        "modelos": cfg["modelos"],
         "anuncios": sorted(activos, key=lambda x: x["visto"], reverse=True),
     }, ensure_ascii=False, indent=1))
     avisos.publicar_clave_publica()
@@ -97,20 +98,21 @@ def main():
                         "Envío protegido")
         x["visto"] = ahora
         x["modelo"] = motivo
+        x["buen_precio"] = x["precio"] <= cfg["modelos"][motivo]["buen_precio"]
         nuevos.append(x)
         estado["activos"] = [a for a in estado["activos"] if a["url"] != x["url"]]
-        estado["activos"].append({k: x.get(k, "") for k in ("fuente", "titulo", "precio", "url", "entrega", "visto", "modelo", "ciudad", "distancia_km")})
+        estado["activos"].append({k: x.get(k, "") for k in ("fuente", "titulo", "precio", "url", "entrega", "visto", "modelo", "ciudad", "distancia_km", "buen_precio")})
 
     print(f"Nuevos que cumplen: {len(nuevos)}")
     for m, n in sorted(motivos.items(), key=lambda kv: -kv[1]):
         print(f"  descartados por {m}: {n}")
     if not (sin_avisos or primera_vez):
         for x in nuevos[: cfg["max_avisos_por_ejecucion"]]:
-            avisar(cfg, f"{x['modelo']} · {x['precio']:.0f} € · {x['fuente']}",
+            avisar(cfg, f"{'🔥 ' if x['buen_precio'] else ''}{x['modelo']} · {x['precio']:.0f} € · {x['fuente']}",
                    f"{x['titulo']}\n{x['entrega']}{' · ' + x['ciudad'] if x.get('ciudad') else ''}", x["url"])
             time.sleep(1)
     elif primera_vez and nuevos:
-        avisar(cfg, "Rastreador activado", f"Hay {len(nuevos)} anuncios que ya cumplen los filtros. "
+        avisar(cfg, "Lista actualizada", f"Hay {len(nuevos)} anuncios que cumplen los filtros. "
                "Desde ahora te aviso solo de los nuevos.", prioridad="default")
 
     # Si un portal falla 3 veces seguidas, avisa una vez.
@@ -132,7 +134,7 @@ def main():
 
     ESTADO.parent.mkdir(exist_ok=True)
     ESTADO.write_text(json.dumps(estado, ensure_ascii=False, indent=1))
-    guardar_web(estado["activos"], errores)
+    guardar_web(estado["activos"], errores, cfg)
 
 
 if __name__ == "__main__":

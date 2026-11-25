@@ -91,6 +91,8 @@
   .precio { text-align: right; flex: none; }
   .precio b { font-size: 16px; font-weight: 600; display: block; }
   .precio small { color: var(--muted); font-size: 12px; }
+  .precio .bp { color: var(--pos); }
+  .precio small.bp { font-weight: 600; }
   .nuevo { display: inline-block; margin-top: 3px; font-size: 11px; font-weight: 600; background: var(--lime); color: var(--lime-ink); border-radius: 999px; padding: 2px 8px; }
   .vacio { text-align: center; color: var(--muted); padding: 28px 8px 32px; font-size: 15px; }
 
@@ -106,6 +108,7 @@
   .barra span { font-size: 11px; color: var(--muted); }
   .eje { display: flex; gap: 6px; padding: 6px 4px 12px; }
   .eje span { flex: 1; text-align: center; font-size: 11px; color: var(--muted); }
+  .rango-txt { color: var(--muted); font-size: 13px; padding: 0 4px 12px; margin-top: -4px; }
 
   /* Avisos */
   .texto { padding: 0 4px 14px; color: var(--text); }
@@ -128,9 +131,10 @@
   /* Hoja de ordenar y filtrar */
   .scrim { position: fixed; inset: 0; background: var(--scrim); z-index: 9; opacity: 0; pointer-events: none; transition: opacity .2s; }
   .hoja { position: fixed; left: 0; right: 0; bottom: 0; z-index: 10; max-width: 520px; margin: 0 auto; background: var(--card);
-    border-radius: 28px 28px 0 0; padding: 10px 20px calc(24px + env(safe-area-inset-bottom)); transform: translateY(105%); transition: transform .25s ease; }
+    border-radius: 28px 28px 0 0; padding: 10px 20px calc(24px + env(safe-area-inset-bottom)); transform: translateY(105%); visibility: hidden;
+    transition: transform .25s ease, visibility 0s linear .25s; }
   .abierta .scrim { opacity: 1; pointer-events: auto; }
-  .abierta .hoja { transform: none; }
+  .abierta .hoja { transform: none; visibility: visible; transition: transform .25s ease; }
   .asa { width: 40px; height: 5px; border-radius: 3px; background: var(--line); margin: 0 auto 14px; }
   .hoja h3 { font-size: 20px; margin: 0 0 14px; font-weight: 600; letter-spacing: -0.02em; }
   .hoja h4 { font-size: 13px; color: var(--muted); font-weight: 500; margin: 18px 0 8px; text-transform: uppercase; letter-spacing: .04em; }
@@ -179,7 +183,7 @@
       <button class="accion" data-modelo="PS5" aria-pressed="false">
         <span class="circulo"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3h6l1 18H8z"/><path d="M12 7v3"/></svg></span>PS5
       </button>
-      <button class="accion" data-modelo="Xbox Series" aria-pressed="false">
+      <button class="accion" data-modelo="Xbox" aria-pressed="false">
         <span class="circulo"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="3" width="12" height="18" rx="2"/><circle cx="12" cy="8" r="2.2"/></svg></span>Xbox
       </button>
       <button class="accion" id="abrir-hoja" aria-pressed="false">
@@ -256,7 +260,7 @@
       <button data-e="envio" aria-pressed="false">Envío</button>
     </div>
     <h4>Precio máximo</h4>
-    <div class="rango"><input type="range" id="pmax" min="150" max="400" step="10" value="400" aria-label="Precio máximo"><b id="pmax-txt">400 €</b></div>
+    <div class="rango"><input type="range" id="pmax" min="100" max="750" step="10" value="750" aria-label="Precio máximo"><b id="pmax-txt">750 €</b></div>
     <div style="height:20px"></div>
     <button class="boton" style="width:100%" id="cerrar-hoja">Ver anuncios</button>
   </div>
@@ -275,7 +279,15 @@ const leer = (k, d) => { try { return localStorage.getItem(k) ?? d; } catch (_) 
 const guardar = (k, v) => { try { localStorage.setItem(k, v); } catch (_) {} };
 
 let datos = { anuncios: [] };
-let f = { modelo: leer("f-modelo", ""), orden: leer("f-orden", "recientes"), entrega: leer("f-entrega", ""), pmax: +leer("f-pmax", 400) };
+const PMAX = 750;
+let f = { modelo: leer("f-modelo", ""), orden: leer("f-orden", "recientes"), entrega: leer("f-entrega", ""), pmax: +leer("f-pmax", PMAX) };
+if (f.modelo && !["PS5", "Xbox"].includes(f.modelo)) f.modelo = "";
+if (f.pmax === 400) f.pmax = PMAX;
+function esBuenPrecio(a) {
+  if (typeof a.buen_precio === "boolean") return a.buen_precio;
+  const m = (datos.modelos || {})[modeloDe(a)];
+  return !!m && a.precio <= m.buen_precio;
+}
 const visitaAnterior = +leer("ultima-visita", Date.now());
 addEventListener("pagehide", () => guardar("ultima-visita", Date.now()));
 document.addEventListener("visibilitychange", () => { if (document.hidden) guardar("ultima-visita", Date.now()); });
@@ -290,6 +302,7 @@ function hace(iso) {
   return h < 24 ? `hace ${h} h` : `hace ${Math.round(h / 24)} d`;
 }
 const modeloDe = (a) => a.modelo || (/ps ?5|play ?station ?5|play ?5/i.test(a.titulo) ? "PS5" : "Xbox Series");
+const familia = (a) => (modeloDe(a).startsWith("PS5") ? "PS5" : "Xbox");
 const enMano = (a) => /En mano/.test(a.entrega || "");
 function distancia(a) {
   if (typeof a.distancia_km === "number") return a.distancia_km;
@@ -300,7 +313,7 @@ const mediana = (xs) => { const s = [...xs].sort((a, b) => a - b); const m = s.l
 
 function filtrados() {
   let xs = datos.anuncios.filter((a) =>
-    (!f.modelo || modeloDe(a) === f.modelo) &&
+    (!f.modelo || familia(a) === f.modelo) &&
     (!f.entrega || (f.entrega === "mano" ? enMano(a) : !enMano(a))) &&
     a.precio <= f.pmax);
   const cmp = {
@@ -314,7 +327,7 @@ function filtrados() {
 
 function pintarLista() {
   const xs = filtrados();
-  const filtrosExtra = f.entrega || f.pmax < 400;
+  const filtrosExtra = f.entrega || f.pmax < PMAX;
   document.querySelectorAll(".accion[data-modelo]").forEach((b) => b.setAttribute("aria-pressed", String(b.dataset.modelo === f.modelo)));
   $("abrir-hoja").setAttribute("aria-pressed", String(!!filtrosExtra));
   $("orden-txt").textContent = ORDENES.find((o) => o[0] === f.orden)[1].replace("Precio: de ", "Precio ").replace(" a mayor", " → mayor").replace(" a menor", " → menor");
@@ -325,39 +338,48 @@ function pintarLista() {
   $("hero-sub").textContent = `${f.modelo || "PS5 y Xbox Series"} · últimos 7 días`;
 
   $("lista").innerHTML = xs.length ? xs.map((a) => {
-    const tile = enMano(a) ? "t-hand" : modeloDe(a) === "PS5" ? "t-ps" : "t-xb";
-    const nuevo = new Date(a.visto).getTime() > visitaAnterior ? '<span class="nuevo">Nuevo</span>' : `<small>${esc(a.fuente)}</small>`;
+    const tile = enMano(a) ? "t-hand" : familia(a) === "PS5" ? "t-ps" : "t-xb";
+    const nuevo = new Date(a.visto).getTime() > visitaAnterior ? '<span class="nuevo">Nuevo</span>'
+      : esBuenPrecio(a) ? '<small class="bp">Buen precio</small>' : `<small>${esc(a.fuente)}</small>`;
     const entrega = (a.entrega || "").replace("Envío protegido", "Envío").replace("Tienda con garantía", "Tienda");
-    const meta = [hace(a.visto), entrega, a.ciudad].filter(Boolean).map(esc).join(" · ");
+    const meta = [modeloDe(a), hace(a.visto), entrega, a.ciudad].filter(Boolean).map(esc).join(" · ");
     return `<a class="fila" href="${esc(a.url)}" target="_blank" rel="noopener">
       <span class="tile ${tile}">${ICONO}</span>
       <span class="cuerpo"><div class="titulo">${esc(a.titulo)}</div><div class="meta">${meta}</div></span>
-      <span class="precio"><b>${euros(a.precio)}</b>${nuevo}</span></a>`;
+      <span class="precio"><b${esBuenPrecio(a) ? ' class="bp"' : ""}>${euros(a.precio)}</b>${nuevo}</span></a>`;
   }).join("") : `<div class="vacio">${datos.anuncios.length ? "Ningún anuncio con estos filtros." : "Ahora mismo no hay anuncios que cumplan los requisitos."}</div>`;
 }
 
 function pintarPrecios() {
   const todos = datos.anuncios;
-  if (!todos.length) { $("p-min").textContent = "–"; $("p-min-txt").textContent = "Sin anuncios"; $("p-modelos").innerHTML = ""; return; }
-  const min = todos.reduce((a, b) => (b.precio < a.precio ? b : a));
-  $("p-min").textContent = Math.round(min.precio);
-  $("p-min-txt").textContent = `${modeloDe(min)} · ${min.fuente}`;
-  const tramos = [150, 200, 250, 300, 350, 400];
-  $("p-modelos").innerHTML = ["PS5", "Xbox Series"].map((m) => {
+  const modelos = datos.modelos || {};
+  if (!todos.length) { $("p-min").textContent = "–"; $("p-min-txt").textContent = "Sin anuncios que cumplan"; }
+  else {
+    const min = todos.reduce((a, b) => (b.precio < a.precio ? b : a));
+    $("p-min").textContent = Math.round(min.precio);
+    $("p-min-txt").textContent = `${modeloDe(min)} · ${min.fuente}`;
+  }
+  const orden = ["Xbox Series S", "Xbox Series X", "PS5 Digital", "PS5 Estándar", "PS5 Pro", "PS5", "Xbox Series"];
+  $("p-modelos").innerHTML = orden.filter((m) => modelos[m]).map((m) => {
+    const lim = modelos[m];
     const ps = todos.filter((a) => modeloDe(a) === m).map((a) => a.precio);
-    const color = m === "PS5" ? "var(--ps-ink)" : "var(--xb-ink)";
-    if (!ps.length) return `<div class="bloque modelo-card"><div class="bloque-cab"><h2>${m}</h2></div><div class="vacio">Ninguna por debajo de 400 € esta semana.</div></div>`;
-    const cuentas = tramos.slice(0, -1).map((t, i) => ps.filter((p) => p >= t && (p < tramos[i + 1] || (i === tramos.length - 2 && p <= 400))).length);
+    if (!ps.length && lim.nota) return "";
+    const color = m.startsWith("PS5") ? "var(--ps-ink)" : "var(--xb-ink)";
+    const cab = `<div class="bloque-cab"><h2>${esc(m)}</h2><span class="enlace">máx. ${lim.max} €</span></div>
+      <div class="rango-txt">Buen precio por debajo de <b>${lim.buen_precio} €</b>${lim.nota ? ` · ${esc(lim.nota)}` : ""}</div>`;
+    if (!ps.length) return `<div class="bloque modelo-card">${cab}<div class="vacio">Ninguna dentro del precio esta semana.</div></div>`;
+    const paso = (lim.max - lim.min) / 5;
+    const tramos = [0, 1, 2, 3, 4].map((i) => Math.round((lim.min + i * paso) / 10) * 10);
+    const cuentas = tramos.map((t, i) => ps.filter((p) => p >= t && (i === 4 ? p <= lim.max : p < tramos[i + 1])).length);
     const max = Math.max(...cuentas, 1);
-    return `<div class="bloque modelo-card">
-      <div class="bloque-cab"><h2>${m}</h2><span class="enlace">${ps.length} anuncios</span></div>
+    return `<div class="bloque modelo-card">${cab}
       <div class="stats">
         <div class="stat"><small>Mínimo</small><b>${euros(Math.min(...ps))}</b></div>
         <div class="stat"><small>Mediana</small><b>${euros(mediana(ps))}</b></div>
-        <div class="stat"><small>Máximo</small><b>${euros(Math.max(...ps))}</b></div>
+        <div class="stat"><small>Anuncios</small><b>${ps.length}</b></div>
       </div>
-      <div class="barras">${cuentas.map((c) => `<div class="barra"><span>${c || ""}</span><i style="height:${(c / max) * 70 + 4}px;background:${c ? color : "var(--line)"};opacity:${c ? 1 : .6}"></i></div>`).join("")}</div>
-      <div class="eje">${tramos.slice(0, -1).map((t) => `<span>${t}</span>`).join("")}</div>
+      <div class="barras">${cuentas.map((c, i) => `<div class="barra"><span>${c || ""}</span><i style="height:${(c / max) * 70 + 4}px;background:${c ? color : "var(--line)"};opacity:${c ? 1 : .6}"></i></div>`).join("")}</div>
+      <div class="eje">${tramos.map((t) => `<span>${t}</span>`).join("")}</div>
     </div>`;
   }).join("");
 }
@@ -396,13 +418,14 @@ $("ordenes").innerHTML = ORDENES.map(([k, t]) => `<button class="opcion" role="r
 function pintarHoja() {
   document.querySelectorAll(".opcion").forEach((b) => {
     const on = b.dataset.o === f.orden;
-    b.setAttribute("aria-checked", String(on)); b.lastChild.style.visibility = on ? "visible" : "hidden";
+    b.setAttribute("aria-checked", String(on)); b.lastChild.style.opacity = on ? "1" : "0";
   });
   document.querySelectorAll("#entregas button").forEach((b) => b.setAttribute("aria-pressed", String(b.dataset.e === f.entrega)));
   $("pmax").value = f.pmax; $("pmax-txt").textContent = euros(f.pmax);
 }
 document.querySelectorAll(".opcion").forEach((b) => b.addEventListener("click", () => { f.orden = b.dataset.o; guardar("f-orden", f.orden); pintarHoja(); pintarLista(); }));
 document.querySelectorAll("#entregas button").forEach((b) => b.addEventListener("click", () => { f.entrega = b.dataset.e; guardar("f-entrega", f.entrega); pintarHoja(); pintarLista(); }));
+pintarHoja();
 $("pmax").addEventListener("input", (e) => { f.pmax = +e.target.value; guardar("f-pmax", f.pmax); pintarHoja(); pintarLista(); });
 const abrir = () => { pintarHoja(); $("capa").classList.add("abierta"); };
 const cerrar = () => $("capa").classList.remove("abierta");

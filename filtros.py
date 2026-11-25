@@ -90,6 +90,37 @@ def modelo(anuncio) -> str | None:
     return "PS5" if PS5.search(t) else "Xbox Series"
 
 
+# --- Versión concreta (para el precio máximo de cada modelo) ---------------------
+DIGITAL = re.compile(r"\bdigital\b|\bsin lector\b|\bsin disco\b|\bsin unidad\b")
+ESTANDAR = re.compile(r"\bcon lector\b|\blector\b|\bdisco\b|\bestandar\b|\bstandard\b|\bblu ?ray\b|\bfisica\b")
+DIGITAL_DESC = re.compile(r"edicion digital|version digital|modelo digital|\bsin lector\b|\bsin disco\b|digital edition")
+ESTANDAR_DESC = re.compile(r"\bcon lector\b|lector de discos?|edicion estandar|version estandar|version con lector|con unidad de disco|standard edition")
+
+
+def version(anuncio, familia: str) -> str:
+    """Modelo concreto: 'PS5 Pro', 'PS5 Digital', 'PS5 Estándar', 'Xbox Series X', 'Xbox Series S',
+    o la familia sola ('PS5', 'Xbox Series') si el anuncio no lo dice."""
+    t = normalizar(anuncio["titulo"])
+    d = normalizar(anuncio.get("descripcion", ""))
+    if familia == "PS5":
+        if re.search(r"\b(ps ?5|play ?station ?5|play ?5|playstation5) pro\b|\bpro\b", t):
+            return "PS5 Pro"
+        if DIGITAL.search(t):
+            return "PS5 Digital"
+        if ESTANDAR.search(t):
+            return "PS5 Estándar"
+        if DIGITAL_DESC.search(d):
+            return "PS5 Digital"
+        if ESTANDAR_DESC.search(d):
+            return "PS5 Estándar"
+        return "PS5"
+    if re.search(r"series ?x\b", t):
+        return "Xbox Series X"
+    if re.search(r"series ?s\b", t):
+        return "Xbox Series S"
+    return "Xbox Series"
+
+
 CONSOLA_TOKEN = r"(ps ?5|play ?station ?5|play ?5|xbox( one)? series ?(x|s)?|series ?(x|s))"
 ACCESORIO_DE_CONSOLA = re.compile(rf"{ACCESORIO}( \w+)?( de| para| compatible con)?( la| una)? {CONSOLA_TOKEN}\b")
 PARA_CONSOLA = re.compile(rf"\b(para|compatible con)( la| una)? {CONSOLA_TOKEN}\b")
@@ -129,13 +160,15 @@ def evaluar(anuncio, cfg) -> tuple[bool, str]:
     if es_accesorio(anuncio["titulo"]):
         return False, "accesorio o solo mando"
 
+    m = version(anuncio, m)
+    lim = cfg["modelos"][m]
     precio = anuncio.get("precio")
     if precio is None:
         return False, "sin precio"
-    if precio > cfg["precio_max"]:
-        return False, f"precio {precio:.0f} > {cfg['precio_max']}"
-    if precio < cfg["precio_min"]:
-        return False, f"precio {precio:.0f} sospechosamente bajo"
+    if precio > lim["max"]:
+        return False, f"{m} por encima de {lim['max']} €"
+    if precio < lim["min"]:
+        return False, f"{m} a precio sospechosamente bajo"
 
     if AVERIA.search(texto):
         return False, "averiada o sin probar"

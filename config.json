@@ -1,9 +1,62 @@
 {
-  "precio_min": 150,
-  "precio_max": 400,
-  "madrid": { "lat": 40.4168, "lon": -3.7038, "radio_km": 50 },
-  "busquedas": ["ps5", "playstation 5", "xbox series x", "xbox series s"],
-  "fuentes": { "wallapop": true, "cex": false, "ebay": true },
+  "precio_min": 120,
+  "precio_max": 750,
+  "modelos": {
+    "Xbox Series S": {
+      "buen_precio": 220,
+      "max": 250,
+      "min": 120
+    },
+    "Xbox Series X": {
+      "buen_precio": 400,
+      "max": 450,
+      "min": 220
+    },
+    "PS5 Digital": {
+      "buen_precio": 380,
+      "max": 420,
+      "min": 200
+    },
+    "PS5 Estándar": {
+      "buen_precio": 420,
+      "max": 460,
+      "min": 230
+    },
+    "PS5 Pro": {
+      "buen_precio": 650,
+      "max": 750,
+      "min": 350
+    },
+    "PS5": {
+      "buen_precio": 380,
+      "max": 420,
+      "min": 200,
+      "nota": "edición sin especificar: se aplica el máximo de la Digital"
+    },
+    "Xbox Series": {
+      "buen_precio": 220,
+      "max": 250,
+      "min": 120,
+      "nota": "sin decir S o X: se aplica el máximo de la Series S"
+    }
+  },
+  "madrid": {
+    "lat": 40.4168,
+    "lon": -3.7038,
+    "radio_km": 50
+  },
+  "busquedas": [
+    "ps5",
+    "playstation 5",
+    "ps5 pro",
+    "xbox series x",
+    "xbox series s"
+  ],
+  "fuentes": {
+    "wallapop": true,
+    "cex": false,
+    "ebay": true
+  },
   "ntfy_servidor": "https://ntfy.sh",
   "max_avisos_por_ejecucion": 15
 }
