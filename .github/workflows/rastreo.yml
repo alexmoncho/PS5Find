@@ -3,7 +3,12 @@ name: Rastreo de consolas
 on:
   schedule:
     - cron: "*/30 * * * *"   # cada 30 min; cabe en los 2.000 min gratis de un repo privado (GitHub puede retrasarlo unos minutos)
-  workflow_dispatch: {}
+  workflow_dispatch:
+    inputs:
+      prueba:
+        description: "Solo enviar una notificación de prueba"
+        type: boolean
+        default: false
 
 permissions:
   contents: write
@@ -32,7 +37,7 @@ jobs:
           NTFY_TOPIC: ${{ secrets.NTFY_TOPIC }}
           EBAY_CLIENT_ID: ${{ secrets.EBAY_CLIENT_ID }}
           EBAY_CLIENT_SECRET: ${{ secrets.EBAY_CLIENT_SECRET }}
-        run: python rastreador.py
+        run: python rastreador.py ${{ inputs.prueba && '--prueba' || '' }}
       - name: Guardar estado y web
         run: |
           git config user.name "rastreador"
