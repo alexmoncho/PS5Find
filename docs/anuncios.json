@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-25T18:13:44+00:00",
+ "actualizado": "2026-11-25T19:28:29+00:00",
  "portales_con_error": [],
  "modelos": {
   "Xbox Series S": {
@@ -41,6 +41,18 @@
   }
  },
  "anuncios": [
+  {
+   "fuente": "Wallapop",
+   "titulo": "PlayStation 5 Pro",
+   "precio": 490.0,
+   "url": "https://es.wallapop.com/item/playstation-5-pro-1328233271",
+   "entrega": "Envío protegido",
+   "visto": "2026-11-25T19:28:11.818984+00:00",
+   "modelo": "PS5 Pro",
+   "ciudad": "Sevilla",
+   "distancia_km": 392.38557605950797,
+   "buen_precio": true
+  },
   {
    "fuente": "Wallapop",
    "titulo": "Xbox Series S Blanca",
