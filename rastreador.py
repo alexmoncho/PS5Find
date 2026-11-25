@@ -95,6 +95,8 @@ def main():
         estado["vistos"][clave] = ahora
         if not ok:
             motivos[motivo] = motivos.get(motivo, 0) + 1
+            if motivo not in ("no es PS5 ni Xbox Series", "accesorio o solo mando"):
+                print(f"  descartada ({motivo}): {x['precio']} € · {x['titulo'][:60]}")
             continue
         d = x.get("distancia_km")
         x["entrega"] = ("Tienda con garantía" if x.get("tienda") else
