@@ -89,7 +89,15 @@
   "Wallapop:mzn3rn2lo2jn:375": "2026-11-25T16:52:50.879357+00:00",
   "Wallapop:w67vm04dgy6x:255": "2026-11-25T16:52:50.879357+00:00",
   "Wallapop:9jdwoy2oo46k:345": "2026-11-25T16:52:50.879357+00:00",
-  "Wallapop:nzxe12011e62:249": "2026-11-25T16:52:50.879357+00:00"
+  "Wallapop:nzxe12011e62:249": "2026-11-25T16:52:50.879357+00:00",
+  "Wallapop:4z48w5ed8wjy:250": "2026-11-25T17:23:51.008304+00:00",
+  "Wallapop:wzyrmk4wme65:210": "2026-11-25T17:23:51.008304+00:00",
+  "Wallapop:xzogyp2947j9:150": "2026-11-25T17:23:51.008304+00:00",
+  "Wallapop:w67vm04l576x:300": "2026-11-25T17:23:51.008304+00:00",
+  "Wallapop:wzyrmk4gm565:150": "2026-11-25T17:23:51.008304+00:00",
+  "Wallapop:wzyrmk4dpv65:350": "2026-11-25T17:23:51.008304+00:00",
+  "Wallapop:0j280v42lejy:400": "2026-11-25T17:23:51.008304+00:00",
+  "Wallapop:mzn3rn2my0jn:400": "2026-11-25T17:23:51.008304+00:00"
  },
  "activos": [
   {
@@ -216,6 +224,28 @@
    "modelo": "PS5",
    "ciudad": "Huesca",
    "distancia_km": 335.33854032618825
+  },
+  {
+   "fuente": "Wallapop",
+   "titulo": "Xbox Series S 512GB como nueva + mando (GTA 6)",
+   "precio": 350.0,
+   "url": "https://es.wallapop.com/item/xbox-series-s-512gb-como-nueva---mando-gta-6-1328182092",
+   "entrega": "Envío protegido",
+   "visto": "2026-11-25T17:23:51.008304+00:00",
+   "modelo": "Xbox Series",
+   "ciudad": "Campos",
+   "distancia_km": 585.1261930272084
+  },
+  {
+   "fuente": "Wallapop",
+   "titulo": "Xbox Series S Blanca",
+   "precio": 400.0,
+   "url": "https://es.wallapop.com/item/xbox-series-s-blanca-1328178011",
+   "entrega": "En mano, 20 km",
+   "visto": "2026-11-25T17:23:51.008304+00:00",
+   "modelo": "Xbox Series",
+   "ciudad": "Torrejón de Ardoz",
+   "distancia_km": 19.730866988280983
   }
  ],
  "fallos": {

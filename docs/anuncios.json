@@ -1,7 +1,29 @@
 {
- "actualizado": "2026-11-25T16:53:06+00:00",
+ "actualizado": "2026-11-25T17:24:06+00:00",
  "portales_con_error": [],
  "anuncios": [
+  {
+   "fuente": "Wallapop",
+   "titulo": "Xbox Series S 512GB como nueva + mando (GTA 6)",
+   "precio": 350.0,
+   "url": "https://es.wallapop.com/item/xbox-series-s-512gb-como-nueva---mando-gta-6-1328182092",
+   "entrega": "Envío protegido",
+   "visto": "2026-11-25T17:23:51.008304+00:00",
+   "modelo": "Xbox Series",
+   "ciudad": "Campos",
+   "distancia_km": 585.1261930272084
+  },
+  {
+   "fuente": "Wallapop",
+   "titulo": "Xbox Series S Blanca",
+   "precio": 400.0,
+   "url": "https://es.wallapop.com/item/xbox-series-s-blanca-1328178011",
+   "entrega": "En mano, 20 km",
+   "visto": "2026-11-25T17:23:51.008304+00:00",
+   "modelo": "Xbox Series",
+   "ciudad": "Torrejón de Ardoz",
+   "distancia_km": 19.730866988280983
+  },
   {
    "fuente": "Wallapop",
    "titulo": "PlayStation 5 Slim 1TB con caja",
