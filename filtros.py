@@ -145,6 +145,9 @@ def evaluar(anuncio, cfg) -> tuple[bool, str]:
     if anuncio.get("estado") not in ESTADOS_OK or ESTADO_MALO_TEXTO.search(texto):
         return False, "estado peor que bueno"
 
+    if anuncio.get("pais") and anuncio["pais"] != "ES":
+        return False, "fuera de España"
+
     # Entrega: en mano en Madrid o envío con pago protegido de la plataforma.
     if anuncio.get("tienda"):
         pass

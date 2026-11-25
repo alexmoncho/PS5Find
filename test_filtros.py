@@ -8,9 +8,9 @@ from filtros import evaluar
 CFG = json.loads((Path(__file__).parent / "config.json").read_text())
 
 
-def a(titulo, precio=350, desc="", envio=True, dist=None, estado="bueno", tienda=False):
+def a(titulo, precio=350, desc="", envio=True, dist=None, estado="bueno", tienda=False, pais="ES"):
     return dict(fuente="t", id="1", titulo=titulo, descripcion=desc, precio=precio, url="",
-                envio=envio, distancia_km=dist, estado=estado, tienda=tienda)
+                envio=envio, distancia_km=dist, estado=estado, tienda=tienda, pais=pais)
 
 
 ACEPTADOS = [
@@ -51,6 +51,7 @@ RECHAZADOS = [
     (a("PS Portal PS5", 185), "portal"),
     (a("Patinete Xiaomi 4 o se cambia por PS5", 220), "cambio"),
     (a("iPad 10ª o intercambio posible con Xbox Series S", 280), "cambio"),
+    (a("Xbox Series S + 2 controladores", 275, pais="IT"), "Italia (Budrio)"),
 ]
 
 

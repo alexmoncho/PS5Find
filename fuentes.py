@@ -36,6 +36,19 @@ def _distancia_km(lat1, lon1, lat2, lon2):
     return 2 * r * math.asin(math.sqrt(h))
 
 
+def _pais(loc):
+    """'ES' si el anuncio está en España. Usa country_code si Wallapop lo da; si no, por coordenadas."""
+    cc = (loc.get("country_code") or "").upper()
+    if cc:
+        return cc
+    lat, lon = loc.get("latitude"), loc.get("longitude")
+    if lat is None or lon is None:
+        return None
+    peninsula_baleares = 35.2 <= lat <= 43.9 and -9.5 <= lon <= 4.6
+    canarias = 27.5 <= lat <= 29.5 and -18.3 <= lon <= -13.3
+    return "ES" if (peninsula_baleares or canarias) else "XX"
+
+
 # --- Wallapop ---------------------------------------------------------------
 # Endpoint de búsqueda que usa es.wallapop.com. Estado: no verificado desde este entorno.
 WALLAPOP_ESTADOS = {
@@ -74,7 +87,7 @@ def wallapop(cfg):
                 distancia_km=_distancia_km(m["lat"], m["lon"], loc.get("latitude"), loc.get("longitude")),
                 estado=WALLAPOP_ESTADOS.get((it.get("condition") or {}).get("value")
                                             if isinstance(it.get("condition"), dict) else it.get("condition")),
-                tienda=False, ciudad=loc.get("city", ""),
+                tienda=False, ciudad=loc.get("city", ""), pais=_pais(loc),
             ))
         time.sleep(3)
     return out

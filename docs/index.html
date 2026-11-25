@@ -8,193 +8,467 @@
 <link rel="manifest" href="manifest.webmanifest">
 <link rel="icon" href="icon-192.png">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
-<meta name="theme-color" content="#111827">
+<meta name="theme-color" content="#EFEEEA" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0E0E10" media="(prefers-color-scheme: dark)">
 <meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
 <meta name="apple-mobile-web-app-title" content="Consolas">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
   :root {
-    --bg: #f3f4f6; --card: #ffffff; --text: #111827; --muted: #6b7280; --line: #e5e7eb;
-    --accent: #2563eb; --accent-text: #ffffff; --ok: #047857; --warn: #b45309; --chip: #e5e7eb;
+    --bg: #EFEEEA; --card: #FFFFFF; --card-2: #F7F6F3; --text: #141414; --muted: #7B7A75; --line: #E8E6E1;
+    --lime: #D6F26A; --lime-ink: #1C2600; --pos: #2E7A4C; --shadow: 0 1px 2px rgba(20,20,20,.04), 0 8px 24px rgba(20,20,20,.06);
+    --ps-bg: #DDD5FB; --ps-ink: #5A43C8; --xb-bg: #D3EADC; --xb-ink: #2E7A4C; --hand-bg: #F7D9CB; --hand-ink: #B4532E;
+    --blob-1: rgba(190,175,255,.55); --blob-2: rgba(170,220,190,.55); --scrim: rgba(10,10,10,.35);
   }
   @media (prefers-color-scheme: dark) {
     :root {
-      --bg: #0b1120; --card: #111827; --text: #f3f4f6; --muted: #9ca3af; --line: #1f2937;
-      --accent: #3b82f6; --accent-text: #ffffff; --ok: #34d399; --warn: #fbbf24; --chip: #1f2937;
+      --bg: #0E0E10; --card: #19191C; --card-2: #212125; --text: #F3F3F0; --muted: #9B9A96; --line: #2A2A2E;
+      --lime: #D6F26A; --lime-ink: #1C2600; --pos: #8FD6AA; --shadow: 0 1px 2px rgba(0,0,0,.3);
+      --ps-bg: #2C2650; --ps-ink: #BBADFF; --xb-bg: #1D3628; --xb-ink: #8FD6AA; --hand-bg: #3D2920; --hand-ink: #F3A987;
+      --blob-1: rgba(120,100,230,.28); --blob-2: rgba(80,170,120,.22); --scrim: rgba(0,0,0,.6);
     }
   }
-  * { box-sizing: border-box; }
+  * { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+  html, body { margin: 0; background: var(--bg); color: var(--text); }
   body {
-    margin: 0; background: var(--bg); color: var(--text);
-    font: 16px/1.4 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
-    padding: env(safe-area-inset-top) 16px calc(24px + env(safe-area-inset-bottom));
+    font: 16px/1.4 Inter, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    font-feature-settings: "tnum" 1;
   }
-  header { padding: 16px 0 8px; display: flex; align-items: baseline; justify-content: space-between; gap: 8px; }
-  h1 { font-size: 22px; margin: 0; }
-  .muted { color: var(--muted); font-size: 13px; }
-  button, .btn {
-    font: inherit; border: 0; border-radius: 10px; padding: 10px 14px; cursor: pointer;
-    background: var(--accent); color: var(--accent-text); text-decoration: none; display: inline-block;
-  }
-  button.sec { background: var(--chip); color: var(--text); }
-  .panel { background: var(--card); border: 1px solid var(--line); border-radius: 14px; padding: 14px; margin: 12px 0; }
-  .panel p { margin: 6px 0; }
-  textarea { width: 100%; min-height: 90px; font: 12px ui-monospace, monospace; border-radius: 8px;
-    border: 1px solid var(--line); background: var(--bg); color: var(--text); padding: 8px; }
-  .chips { display: flex; gap: 8px; margin: 12px 0; overflow-x: auto; }
-  .chip { background: var(--chip); color: var(--text); border-radius: 999px; padding: 6px 14px; font-size: 14px; white-space: nowrap; }
-  .chip[aria-pressed="true"] { background: var(--accent); color: var(--accent-text); }
-  .lista { display: grid; gap: 10px; }
-  a.anuncio { display: block; background: var(--card); border: 1px solid var(--line); border-radius: 14px;
-    padding: 12px 14px; color: inherit; text-decoration: none; }
-  .fila { display: flex; justify-content: space-between; gap: 12px; align-items: flex-start; }
-  .titulo { font-weight: 600; overflow-wrap: anywhere; }
-  .precio { font-size: 20px; font-weight: 700; white-space: nowrap; }
-  .meta { margin-top: 6px; display: flex; flex-wrap: wrap; gap: 6px 12px; color: var(--muted); font-size: 13px; }
-  .entrega { color: var(--ok); }
-  .vacio { text-align: center; color: var(--muted); padding: 32px 0; }
-  .aviso-err { color: var(--warn); }
-  .oculto { display: none; }
+  .app { max-width: 520px; margin: 0 auto; padding: calc(12px + env(safe-area-inset-top)) 16px calc(110px + env(safe-area-inset-bottom)); }
+  button { font: inherit; color: inherit; background: none; border: 0; padding: 0; cursor: pointer; }
+  svg { display: block; }
+
+  /* Cabecera */
+  .top { display: flex; align-items: center; justify-content: space-between; padding: 8px 0 18px; }
+  .marca { font-size: 30px; font-weight: 700; letter-spacing: -0.04em; }
+  .marca span { color: var(--muted); font-weight: 500; }
+  .iconos { display: flex; gap: 10px; }
+  .redondo { width: 46px; height: 46px; border-radius: 50%; background: var(--card); box-shadow: var(--shadow);
+    display: grid; place-items: center; position: relative; }
+  .redondo .punto { position: absolute; top: 10px; right: 11px; width: 9px; height: 9px; border-radius: 50%;
+    background: var(--lime); border: 2px solid var(--card); }
+  .girando svg { animation: giro .8s linear infinite; }
+  @keyframes giro { to { transform: rotate(360deg); } }
+
+  /* Tarjeta resumen */
+  .hero { position: relative; overflow: hidden; background: var(--card); border-radius: 28px; padding: 20px 20px 18px; box-shadow: var(--shadow); }
+  .hero::before, .hero::after { content: ""; position: absolute; border-radius: 50%; filter: blur(36px); pointer-events: none; }
+  .hero::before { width: 220px; height: 180px; right: -60px; top: -60px; background: var(--blob-1); }
+  .hero::after { width: 240px; height: 160px; right: 10px; bottom: -90px; background: var(--blob-2); }
+  .hero > * { position: relative; z-index: 1; }
+  .hero-sub { color: var(--muted); font-size: 14px; }
+  .hero-num { display: flex; align-items: baseline; gap: 8px; margin: 10px 0 16px; }
+  .hero-num b { font-size: 52px; font-weight: 600; letter-spacing: -0.04em; line-height: 1; }
+  .hero-num span { color: var(--muted); font-size: 20px; }
+  .hero-pie { display: flex; gap: 8px; flex-wrap: wrap; }
+  .pastilla { display: inline-flex; align-items: center; gap: 6px; border: 1px solid var(--line); background: color-mix(in srgb, var(--card) 70%, transparent);
+    border-radius: 999px; padding: 8px 14px; font-size: 14px; font-weight: 500; }
+  .aviso-err { color: var(--hand-ink); }
+
+  /* Acciones rápidas */
+  .acciones { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; margin: 22px 0 22px; }
+  .accion { display: flex; flex-direction: column; align-items: center; gap: 8px; font-size: 14px; font-weight: 500; }
+  .accion .circulo { width: 56px; height: 56px; border-radius: 50%; background: var(--card); box-shadow: var(--shadow); display: grid; place-items: center; transition: background .15s; }
+  .accion[aria-pressed="true"] .circulo { background: var(--lime); color: var(--lime-ink); box-shadow: none; }
+
+  /* Lista */
+  .bloque { background: var(--card); border-radius: 28px; padding: 18px 16px 8px; box-shadow: var(--shadow); }
+  .bloque-cab { display: flex; justify-content: space-between; align-items: center; padding: 0 4px 10px; }
+  .bloque-cab h2 { font-size: 20px; margin: 0; font-weight: 600; letter-spacing: -0.02em; }
+  .enlace { color: var(--muted); font-size: 15px; display: inline-flex; align-items: center; gap: 4px; }
+  .fila { display: flex; align-items: center; gap: 12px; padding: 10px 4px; color: inherit; text-decoration: none; border-radius: 14px; }
+  .fila + .fila { border-top: 1px solid var(--line); border-radius: 0; }
+  .tile { flex: none; width: 44px; height: 44px; border-radius: 12px; display: grid; place-items: center; }
+  .t-ps { background: var(--ps-bg); color: var(--ps-ink); }
+  .t-xb { background: var(--xb-bg); color: var(--xb-ink); }
+  .t-hand { background: var(--hand-bg); color: var(--hand-ink); }
+  .cuerpo { flex: 1; min-width: 0; }
+  .titulo { font-size: 16px; font-weight: 500; line-height: 1.3; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; overflow-wrap: anywhere; }
+  .meta { color: var(--muted); font-size: 13px; margin-top: 2px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .precio { text-align: right; flex: none; }
+  .precio b { font-size: 16px; font-weight: 600; display: block; }
+  .precio small { color: var(--muted); font-size: 12px; }
+  .nuevo { display: inline-block; margin-top: 3px; font-size: 11px; font-weight: 600; background: var(--lime); color: var(--lime-ink); border-radius: 999px; padding: 2px 8px; }
+  .vacio { text-align: center; color: var(--muted); padding: 28px 8px 32px; font-size: 15px; }
+
+  /* Precios */
+  .modelo-card { margin-bottom: 14px; }
+  .stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin: 4px 0 16px; }
+  .stat { background: var(--card-2); border-radius: 16px; padding: 12px; }
+  .stat small { color: var(--muted); font-size: 12px; display: block; }
+  .stat b { font-size: 20px; font-weight: 600; letter-spacing: -0.02em; }
+  .barras { display: flex; align-items: flex-end; gap: 6px; height: 90px; padding: 0 4px; }
+  .barra { flex: 1; display: flex; flex-direction: column; justify-content: flex-end; align-items: center; height: 100%; gap: 4px; }
+  .barra i { display: block; width: 100%; border-radius: 6px 6px 3px 3px; min-height: 4px; }
+  .barra span { font-size: 11px; color: var(--muted); }
+  .eje { display: flex; gap: 6px; padding: 6px 4px 12px; }
+  .eje span { flex: 1; text-align: center; font-size: 11px; color: var(--muted); }
+
+  /* Avisos */
+  .texto { padding: 0 4px 14px; color: var(--text); }
+  .texto p { margin: 0 0 10px; }
+  .boton { display: inline-flex; align-items: center; justify-content: center; gap: 8px; border-radius: 999px; padding: 13px 20px; font-weight: 600;
+    background: var(--lime); color: var(--lime-ink); text-decoration: none; }
+  .boton.sec { background: var(--card-2); color: var(--text); }
+  textarea { width: 100%; min-height: 96px; font: 12px ui-monospace, monospace; border-radius: 14px; border: 1px solid var(--line);
+    background: var(--card-2); color: var(--text); padding: 10px; margin: 4px 0 10px; }
+  .botones { display: flex; gap: 8px; flex-wrap: wrap; }
+
+  /* Barra inferior */
+  .nav { position: fixed; left: 50%; transform: translateX(-50%); bottom: calc(14px + env(safe-area-inset-bottom)); z-index: 5;
+    display: flex; gap: 4px; padding: 6px; border-radius: 999px; background: color-mix(in srgb, var(--card) 88%, transparent);
+    backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); box-shadow: 0 8px 30px rgba(0,0,0,.12); border: 1px solid var(--line); }
+  .nav button { width: 96px; height: 54px; border-radius: 999px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 3px;
+    font-size: 12px; font-weight: 500; color: var(--muted); }
+  .nav button[aria-current="page"] { background: var(--lime); color: var(--lime-ink); }
+
+  /* Hoja de ordenar y filtrar */
+  .scrim { position: fixed; inset: 0; background: var(--scrim); z-index: 9; opacity: 0; pointer-events: none; transition: opacity .2s; }
+  .hoja { position: fixed; left: 0; right: 0; bottom: 0; z-index: 10; max-width: 520px; margin: 0 auto; background: var(--card);
+    border-radius: 28px 28px 0 0; padding: 10px 20px calc(24px + env(safe-area-inset-bottom)); transform: translateY(105%); transition: transform .25s ease; }
+  .abierta .scrim { opacity: 1; pointer-events: auto; }
+  .abierta .hoja { transform: none; }
+  .asa { width: 40px; height: 5px; border-radius: 3px; background: var(--line); margin: 0 auto 14px; }
+  .hoja h3 { font-size: 20px; margin: 0 0 14px; font-weight: 600; letter-spacing: -0.02em; }
+  .hoja h4 { font-size: 13px; color: var(--muted); font-weight: 500; margin: 18px 0 8px; text-transform: uppercase; letter-spacing: .04em; }
+  .opciones { display: grid; gap: 6px; }
+  .opcion { display: flex; align-items: center; justify-content: space-between; padding: 13px 14px; border-radius: 14px; background: var(--card-2); font-weight: 500; text-align: left; }
+  .opcion[aria-checked="true"] { background: var(--lime); color: var(--lime-ink); }
+  .segmento { display: flex; background: var(--card-2); border-radius: 999px; padding: 4px; }
+  .segmento button { flex: 1; padding: 10px 6px; border-radius: 999px; font-size: 14px; font-weight: 500; }
+  .segmento button[aria-pressed="true"] { background: var(--card); box-shadow: var(--shadow); }
+  .rango { display: flex; align-items: center; gap: 12px; }
+  .rango input { flex: 1; accent-color: var(--pos); }
+  .rango b { min-width: 64px; text-align: right; }
+  .oculto { display: none !important; }
 </style>
 </head>
 <body>
-<header>
-  <h1>Consolas GTA VI</h1>
-  <button class="sec" id="recargar" aria-label="Recargar">↻</button>
-</header>
-<div class="muted" id="estado">Cargando…</div>
+<div class="app">
+  <header class="top">
+    <div class="marca">consolas<span>·gta6</span></div>
+    <div class="iconos">
+      <button class="redondo" id="recargar" aria-label="Recargar">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a9 9 0 1 1-2.64-6.36"/><path d="M21 3v6h-6"/></svg>
+      </button>
+      <button class="redondo" id="ir-avisos" aria-label="Avisos">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"/><path d="M10.3 21a1.94 1.94 0 0 0 3.4 0"/></svg>
+        <i class="punto oculto" id="punto-avisos"></i>
+      </button>
+    </div>
+  </header>
 
-<section class="panel" id="avisos">
-  <p id="avisos-texto">Comprobando avisos…</p>
-  <button id="activar" class="oculto">Activar avisos</button>
-  <div id="codigo" class="oculto">
-    <p>Último paso: copia este código y pégalo como secreto <b>SUSCRIPCIONES_AVISOS</b> en GitHub (o pásaselo a Claude en el chat).</p>
-    <textarea id="codigo-txt" readonly></textarea>
-    <p><button id="copiar">Copiar código</button>
-      <a class="btn" href="https://github.com/alexmoncho/PS5Find/settings/secrets/actions/new" target="_blank" rel="noopener">Abrir GitHub</a></p>
-  </div>
-</section>
+  <!-- Pestaña: anuncios -->
+  <section id="v-anuncios">
+    <div class="hero">
+      <div class="hero-sub" id="hero-sub">PS5 y Xbox Series · últimos 7 días</div>
+      <div class="hero-num"><b id="hero-n">–</b><span id="hero-n-txt">anuncios</span></div>
+      <div class="hero-pie">
+        <span class="pastilla" id="hero-desde">–</span>
+        <span class="pastilla" id="hero-act">Cargando…</span>
+      </div>
+    </div>
 
-<div class="chips" role="group" aria-label="Filtrar">
-  <button class="chip" data-f="" aria-pressed="true">Todas</button>
-  <button class="chip" data-f="PS5" aria-pressed="false">PS5</button>
-  <button class="chip" data-f="Xbox Series" aria-pressed="false">Xbox Series</button>
-  <button class="chip" data-f="mano" aria-pressed="false">En mano</button>
+    <nav class="acciones" aria-label="Modelo">
+      <button class="accion" data-modelo="" aria-pressed="true">
+        <span class="circulo"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="3" y="3" width="7" height="7" rx="2"/><rect x="14" y="3" width="7" height="7" rx="2"/><rect x="3" y="14" width="7" height="7" rx="2"/><rect x="14" y="14" width="7" height="7" rx="2"/></svg></span>Todas
+      </button>
+      <button class="accion" data-modelo="PS5" aria-pressed="false">
+        <span class="circulo"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3h6l1 18H8z"/><path d="M12 7v3"/></svg></span>PS5
+      </button>
+      <button class="accion" data-modelo="Xbox Series" aria-pressed="false">
+        <span class="circulo"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="3" width="12" height="18" rx="2"/><circle cx="12" cy="8" r="2.2"/></svg></span>Xbox
+      </button>
+      <button class="accion" id="abrir-hoja" aria-pressed="false">
+        <span class="circulo"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 6h10M18 6h2M4 12h4M12 12h8M4 18h12M20 18h0"/><circle cx="16" cy="6" r="2"/><circle cx="10" cy="12" r="2"/><circle cx="18" cy="18" r="2"/></svg></span>Filtros
+      </button>
+    </nav>
+
+    <div class="bloque">
+      <div class="bloque-cab">
+        <h2>Anuncios</h2>
+        <button class="enlace" id="abrir-orden"><span id="orden-txt">Más recientes</span>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></button>
+      </div>
+      <div id="lista"></div>
+    </div>
+  </section>
+
+  <!-- Pestaña: precios -->
+  <section id="v-precios" class="oculto">
+    <div class="hero">
+      <div class="hero-sub">Precio más bajo ahora mismo</div>
+      <div class="hero-num"><b id="p-min">–</b><span>€</span></div>
+      <div class="hero-pie"><span class="pastilla" id="p-min-txt">–</span></div>
+    </div>
+    <div style="height:18px"></div>
+    <div id="p-modelos"></div>
+  </section>
+
+  <!-- Pestaña: avisos -->
+  <section id="v-avisos" class="oculto">
+    <div class="hero">
+      <div class="hero-sub">Avisos en este móvil</div>
+      <div class="hero-num"><b id="a-estado" style="font-size:34px">Comprobando…</b></div>
+      <div class="hero-pie"><span class="pastilla">Revisa Wallapop cada 30 min</span></div>
+    </div>
+    <div style="height:18px"></div>
+    <div class="bloque">
+      <div class="texto">
+        <p id="avisos-texto">Comprobando avisos…</p>
+        <button class="boton oculto" id="activar">Activar avisos</button>
+        <div id="codigo" class="oculto">
+          <p>Copia este código y guárdalo como secreto <b>SUSCRIPCIONES_AVISOS</b> en GitHub.</p>
+          <textarea id="codigo-txt" readonly></textarea>
+          <div class="botones">
+            <button class="boton" id="copiar">Copiar código</button>
+            <a class="boton sec" href="https://github.com/alexmoncho/PS5Find/settings/secrets/actions" target="_blank" rel="noopener">Abrir GitHub</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 </div>
 
-<main class="lista" id="lista"></main>
+<nav class="nav" aria-label="Secciones">
+  <button data-v="anuncios" aria-current="page">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10.5 12 3l9 7.5V20a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z"/></svg>Anuncios</button>
+  <button data-v="precios">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 20V11M12 20V4M18 20v-6"/></svg>Precios</button>
+  <button data-v="avisos">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"/><path d="M10.3 21a1.94 1.94 0 0 0 3.4 0"/></svg>Avisos</button>
+</nav>
+
+<div id="capa">
+  <div class="scrim" id="scrim"></div>
+  <div class="hoja" role="dialog" aria-label="Ordenar y filtrar">
+    <div class="asa"></div>
+    <h3>Ordenar y filtrar</h3>
+    <h4>Ordenar por</h4>
+    <div class="opciones" id="ordenes" role="radiogroup"></div>
+    <h4>Entrega</h4>
+    <div class="segmento" id="entregas">
+      <button data-e="" aria-pressed="true">Todas</button>
+      <button data-e="mano" aria-pressed="false">En mano</button>
+      <button data-e="envio" aria-pressed="false">Envío</button>
+    </div>
+    <h4>Precio máximo</h4>
+    <div class="rango"><input type="range" id="pmax" min="150" max="400" step="10" value="400" aria-label="Precio máximo"><b id="pmax-txt">400 €</b></div>
+    <div style="height:20px"></div>
+    <button class="boton" style="width:100%" id="cerrar-hoja">Ver anuncios</button>
+  </div>
+</div>
 
 <script>
 const $ = (id) => document.getElementById(id);
-let datos = { anuncios: [] }, filtro = "";
+const ICONO = '<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 11h4M8 9v4M15 12h.01M18 10h.01"/><path d="M17.3 5H6.7a4 4 0 0 0-3.95 3.4L2 14.6A3 3 0 0 0 7.4 17l1.1-1.4a2 2 0 0 1 1.6-.8h3.8a2 2 0 0 1 1.6.8l1.1 1.4a3 3 0 0 0 5.4-2.4l-.75-6.2A4 4 0 0 0 17.3 5z"/></svg>';
+const ORDENES = [
+  ["recientes", "Más recientes"],
+  ["precio-asc", "Precio: de menor a mayor"],
+  ["precio-desc", "Precio: de mayor a menor"],
+  ["cerca", "Más cerca de Madrid"],
+];
+const leer = (k, d) => { try { return localStorage.getItem(k) ?? d; } catch (_) { return d; } };
+const guardar = (k, v) => { try { localStorage.setItem(k, v); } catch (_) {} };
 
+let datos = { anuncios: [] };
+let f = { modelo: leer("f-modelo", ""), orden: leer("f-orden", "recientes"), entrega: leer("f-entrega", ""), pmax: +leer("f-pmax", 400) };
+const visitaAnterior = +leer("ultima-visita", Date.now());
+addEventListener("pagehide", () => guardar("ultima-visita", Date.now()));
+document.addEventListener("visibilitychange", () => { if (document.hidden) guardar("ultima-visita", Date.now()); });
+
+const esc = (s) => String(s ?? "").replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+const euros = (n) => `${Math.round(n)} €`;
 function hace(iso) {
   const min = Math.round((Date.now() - new Date(iso)) / 60000);
   if (min < 1) return "ahora";
   if (min < 60) return `hace ${min} min`;
   const h = Math.round(min / 60);
-  if (h < 24) return `hace ${h} h`;
-  return `hace ${Math.round(h / 24)} d`;
+  return h < 24 ? `hace ${h} h` : `hace ${Math.round(h / 24)} d`;
+}
+const modeloDe = (a) => a.modelo || (/ps ?5|play ?station ?5|play ?5/i.test(a.titulo) ? "PS5" : "Xbox Series");
+const enMano = (a) => /En mano/.test(a.entrega || "");
+function distancia(a) {
+  if (typeof a.distancia_km === "number") return a.distancia_km;
+  const m = /(\d+) km/.exec(a.entrega || "");
+  return m ? +m[1] : 9999;
+}
+const mediana = (xs) => { const s = [...xs].sort((a, b) => a - b); const m = s.length >> 1; return s.length % 2 ? s[m] : (s[m - 1] + s[m]) / 2; };
+
+function filtrados() {
+  let xs = datos.anuncios.filter((a) =>
+    (!f.modelo || modeloDe(a) === f.modelo) &&
+    (!f.entrega || (f.entrega === "mano" ? enMano(a) : !enMano(a))) &&
+    a.precio <= f.pmax);
+  const cmp = {
+    "recientes": (a, b) => new Date(b.visto) - new Date(a.visto),
+    "precio-asc": (a, b) => a.precio - b.precio,
+    "precio-desc": (a, b) => b.precio - a.precio,
+    "cerca": (a, b) => distancia(a) - distancia(b) || a.precio - b.precio,
+  }[f.orden];
+  return xs.sort(cmp);
 }
 
-function esc(s) { return String(s ?? "").replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c])); }
+function pintarLista() {
+  const xs = filtrados();
+  const filtrosExtra = f.entrega || f.pmax < 400;
+  document.querySelectorAll(".accion[data-modelo]").forEach((b) => b.setAttribute("aria-pressed", String(b.dataset.modelo === f.modelo)));
+  $("abrir-hoja").setAttribute("aria-pressed", String(!!filtrosExtra));
+  $("orden-txt").textContent = ORDENES.find((o) => o[0] === f.orden)[1].replace("Precio: de ", "Precio ").replace(" a mayor", " → mayor").replace(" a menor", " → menor");
 
-function modeloDe(a) {
-  if (a.modelo) return a.modelo;
-  return /ps ?5|play ?station ?5|play ?5/i.test(a.titulo) ? "PS5" : "Xbox Series";
+  $("hero-n").textContent = xs.length;
+  $("hero-n-txt").textContent = xs.length === 1 ? "anuncio" : "anuncios";
+  $("hero-desde").textContent = xs.length ? `desde ${euros(Math.min(...xs.map((a) => a.precio)))}` : "sin resultados";
+  $("hero-sub").textContent = `${f.modelo || "PS5 y Xbox Series"} · últimos 7 días`;
+
+  $("lista").innerHTML = xs.length ? xs.map((a) => {
+    const tile = enMano(a) ? "t-hand" : modeloDe(a) === "PS5" ? "t-ps" : "t-xb";
+    const nuevo = new Date(a.visto).getTime() > visitaAnterior ? '<span class="nuevo">Nuevo</span>' : `<small>${esc(a.fuente)}</small>`;
+    const entrega = (a.entrega || "").replace("Envío protegido", "Envío").replace("Tienda con garantía", "Tienda");
+    const meta = [hace(a.visto), entrega, a.ciudad].filter(Boolean).map(esc).join(" · ");
+    return `<a class="fila" href="${esc(a.url)}" target="_blank" rel="noopener">
+      <span class="tile ${tile}">${ICONO}</span>
+      <span class="cuerpo"><div class="titulo">${esc(a.titulo)}</div><div class="meta">${meta}</div></span>
+      <span class="precio"><b>${euros(a.precio)}</b>${nuevo}</span></a>`;
+  }).join("") : `<div class="vacio">${datos.anuncios.length ? "Ningún anuncio con estos filtros." : "Ahora mismo no hay anuncios que cumplan los requisitos."}</div>`;
 }
 
-function pintar() {
-  const lista = datos.anuncios.filter((a) =>
-    !filtro || (filtro === "mano" ? /En mano/.test(a.entrega) : modeloDe(a) === filtro));
-  $("lista").innerHTML = lista.length ? lista.map((a) => `
-    <a class="anuncio" href="${esc(a.url)}" target="_blank" rel="noopener">
-      <div class="fila"><div class="titulo">${esc(a.titulo)}</div><div class="precio">${Math.round(a.precio)} €</div></div>
-      <div class="meta"><span>${esc(a.fuente)}</span><span class="entrega">${esc(a.entrega)}</span>
-        ${a.ciudad ? `<span>${esc(a.ciudad)}</span>` : ""}<span>${hace(a.visto)}</span></div>
-    </a>`).join("") : `<div class="vacio">Ahora mismo no hay anuncios que cumplan los filtros.</div>`;
+function pintarPrecios() {
+  const todos = datos.anuncios;
+  if (!todos.length) { $("p-min").textContent = "–"; $("p-min-txt").textContent = "Sin anuncios"; $("p-modelos").innerHTML = ""; return; }
+  const min = todos.reduce((a, b) => (b.precio < a.precio ? b : a));
+  $("p-min").textContent = Math.round(min.precio);
+  $("p-min-txt").textContent = `${modeloDe(min)} · ${min.fuente}`;
+  const tramos = [150, 200, 250, 300, 350, 400];
+  $("p-modelos").innerHTML = ["PS5", "Xbox Series"].map((m) => {
+    const ps = todos.filter((a) => modeloDe(a) === m).map((a) => a.precio);
+    const color = m === "PS5" ? "var(--ps-ink)" : "var(--xb-ink)";
+    if (!ps.length) return `<div class="bloque modelo-card"><div class="bloque-cab"><h2>${m}</h2></div><div class="vacio">Ninguna por debajo de 400 € esta semana.</div></div>`;
+    const cuentas = tramos.slice(0, -1).map((t, i) => ps.filter((p) => p >= t && (p < tramos[i + 1] || (i === tramos.length - 2 && p <= 400))).length);
+    const max = Math.max(...cuentas, 1);
+    return `<div class="bloque modelo-card">
+      <div class="bloque-cab"><h2>${m}</h2><span class="enlace">${ps.length} anuncios</span></div>
+      <div class="stats">
+        <div class="stat"><small>Mínimo</small><b>${euros(Math.min(...ps))}</b></div>
+        <div class="stat"><small>Mediana</small><b>${euros(mediana(ps))}</b></div>
+        <div class="stat"><small>Máximo</small><b>${euros(Math.max(...ps))}</b></div>
+      </div>
+      <div class="barras">${cuentas.map((c) => `<div class="barra"><span>${c || ""}</span><i style="height:${(c / max) * 70 + 4}px;background:${c ? color : "var(--line)"};opacity:${c ? 1 : .6}"></i></div>`).join("")}</div>
+      <div class="eje">${tramos.slice(0, -1).map((t) => `<span>${t}</span>`).join("")}</div>
+    </div>`;
+  }).join("");
 }
 
 async function cargar() {
+  $("recargar").classList.add("girando");
   try {
     const r = await fetch(`anuncios.json?t=${Date.now()}`, { cache: "no-store" });
     datos = await r.json();
-    const err = (datos.portales_con_error || []).length ? ` · <span class="aviso-err">sin respuesta: ${datos.portales_con_error.join(", ")}</span>` : "";
-    $("estado").innerHTML = `${datos.anuncios.length} anuncios de los últimos 7 días · última comprobación ${hace(datos.actualizado)}${err}`;
+    const err = (datos.portales_con_error || []).length;
+    $("hero-act").innerHTML = err ? `<span class="aviso-err">Sin respuesta: ${esc(datos.portales_con_error.join(", "))}</span>` : `Revisado ${hace(datos.actualizado)}`;
   } catch (e) {
-    $("estado").textContent = "No se han podido cargar los anuncios.";
+    $("hero-act").textContent = "No se han podido cargar";
   }
-  pintar();
+  $("recargar").classList.remove("girando");
+  pintarLista();
+  pintarPrecios();
 }
 
-document.querySelectorAll(".chip").forEach((b) => b.addEventListener("click", () => {
-  filtro = b.dataset.f;
-  document.querySelectorAll(".chip").forEach((x) => x.setAttribute("aria-pressed", String(x === b)));
-  pintar();
-}));
+/* Navegación */
+function ir(v) {
+  ["anuncios", "precios", "avisos"].forEach((x) => $("v-" + x).classList.toggle("oculto", x !== v));
+  document.querySelectorAll(".nav button").forEach((b) => b.dataset.v === v ? b.setAttribute("aria-current", "page") : b.removeAttribute("aria-current"));
+  scrollTo({ top: 0 });
+}
+document.querySelectorAll(".nav button").forEach((b) => b.addEventListener("click", () => ir(b.dataset.v)));
+$("ir-avisos").addEventListener("click", () => ir("avisos"));
 $("recargar").addEventListener("click", cargar);
 document.addEventListener("visibilitychange", () => { if (!document.hidden) cargar(); });
 
-// --- Avisos (Web Push) ---
+/* Filtros */
+document.querySelectorAll(".accion[data-modelo]").forEach((b) => b.addEventListener("click", () => {
+  f.modelo = b.dataset.modelo; guardar("f-modelo", f.modelo); pintarLista();
+}));
+$("ordenes").innerHTML = ORDENES.map(([k, t]) => `<button class="opcion" role="radio" data-o="${k}">${t}<span>✓</span></button>`).join("");
+function pintarHoja() {
+  document.querySelectorAll(".opcion").forEach((b) => {
+    const on = b.dataset.o === f.orden;
+    b.setAttribute("aria-checked", String(on)); b.lastChild.style.visibility = on ? "visible" : "hidden";
+  });
+  document.querySelectorAll("#entregas button").forEach((b) => b.setAttribute("aria-pressed", String(b.dataset.e === f.entrega)));
+  $("pmax").value = f.pmax; $("pmax-txt").textContent = euros(f.pmax);
+}
+document.querySelectorAll(".opcion").forEach((b) => b.addEventListener("click", () => { f.orden = b.dataset.o; guardar("f-orden", f.orden); pintarHoja(); pintarLista(); }));
+document.querySelectorAll("#entregas button").forEach((b) => b.addEventListener("click", () => { f.entrega = b.dataset.e; guardar("f-entrega", f.entrega); pintarHoja(); pintarLista(); }));
+$("pmax").addEventListener("input", (e) => { f.pmax = +e.target.value; guardar("f-pmax", f.pmax); pintarHoja(); pintarLista(); });
+const abrir = () => { pintarHoja(); $("capa").classList.add("abierta"); };
+const cerrar = () => $("capa").classList.remove("abierta");
+$("abrir-hoja").addEventListener("click", abrir);
+$("abrir-orden").addEventListener("click", abrir);
+$("cerrar-hoja").addEventListener("click", cerrar);
+$("scrim").addEventListener("click", cerrar);
+
+/* Avisos (Web Push) */
 function b64aBytes(b64) {
   const pad = "=".repeat((4 - (b64.length % 4)) % 4);
   const raw = atob((b64 + pad).replace(/-/g, "+").replace(/_/g, "/"));
   return Uint8Array.from(raw, (c) => c.charCodeAt(0));
 }
-
-function mostrarCodigo(sub) {
-  $("codigo-txt").value = JSON.stringify(sub);
-  $("codigo").classList.remove("oculto");
+function mostrarCodigo(sub) { $("codigo-txt").value = JSON.stringify(sub); $("codigo").classList.remove("oculto"); }
+function estadoAvisos(on, txt) {
+  $("a-estado").textContent = txt;
+  $("punto-avisos").classList.toggle("oculto", !on);
 }
-
 async function prepararAvisos() {
   const t = $("avisos-texto");
   const ios = /iphone|ipad|ipod/i.test(navigator.userAgent);
   const instalada = matchMedia("(display-mode: standalone)").matches || navigator.standalone;
   if (!("serviceWorker" in navigator) || !("PushManager" in window)) {
+    estadoAvisos(false, "No disponibles");
     t.innerHTML = ios && !instalada
-      ? "Para recibir avisos en iPhone, añade esta web a la pantalla de inicio (botón Compartir → <b>Añadir a pantalla de inicio</b>) y ábrela desde el icono."
-      : "Este navegador no admite notificaciones. Prueba con Chrome (Android) o Safari instalado en la pantalla de inicio (iPhone).";
+      ? "Para recibir avisos en iPhone, añade esta web a la pantalla de inicio (<b>Compartir → Añadir a pantalla de inicio</b>) y ábrela desde el icono."
+      : "Este navegador no admite notificaciones. Usa Chrome en Android o Safari instalado en la pantalla de inicio en iPhone.";
     return;
   }
   const reg = await navigator.serviceWorker.register("sw.js");
   const sub = await reg.pushManager.getSubscription();
   if (sub && Notification.permission === "granted") {
-    t.textContent = "Avisos activados en este móvil.";
+    estadoAvisos(true, "Activados");
+    t.textContent = "Te llegará una notificación con cada consola nueva que cumpla los filtros. Al tocarla se abre el anuncio.";
     $("activar").textContent = "Ver código de suscripción";
-    $("activar").classList.remove("oculto");
-    $("activar").classList.add("sec");
+    $("activar").classList.remove("oculto"); $("activar").classList.add("sec");
     $("activar").onclick = () => mostrarCodigo(sub);
     return;
   }
+  estadoAvisos(false, "Desactivados");
   t.textContent = ios && !instalada
     ? "Primero añade esta web a la pantalla de inicio (Compartir → Añadir a pantalla de inicio) y ábrela desde el icono."
-    : "Activa los avisos para que te llegue una notificación con cada consola nueva.";
+    : "Activa los avisos para recibir una notificación con cada consola nueva.";
   if (ios && !instalada) return;
   $("activar").classList.remove("oculto");
   $("activar").onclick = async () => {
     try {
-      const permiso = await Notification.requestPermission();
-      if (permiso !== "granted") { t.textContent = "Has denegado las notificaciones. Actívalas en los ajustes del navegador y vuelve a intentarlo."; return; }
+      if (await Notification.requestPermission() !== "granted") { t.textContent = "Has denegado las notificaciones. Actívalas en los ajustes y vuelve a intentarlo."; return; }
       const v = await (await fetch(`vapid.json?t=${Date.now()}`, { cache: "no-store" })).json();
-      if (!v.publicKey) { t.innerHTML = "Falta el secreto <b>CLAVE_AVISOS</b> en GitHub, o aún no ha pasado el rastreador desde que lo añadiste."; return; }
+      if (!v.publicKey) { t.innerHTML = "Falta el secreto <b>CLAVE_AVISOS</b> en GitHub."; return; }
       const nueva = await reg.pushManager.subscribe({ userVisibleOnly: true, applicationServerKey: b64aBytes(v.publicKey) });
-      t.textContent = "Notificaciones permitidas.";
+      estadoAvisos(true, "Casi listos");
+      t.textContent = "Notificaciones permitidas. Falta un paso:";
       $("activar").classList.add("oculto");
       mostrarCodigo(nueva);
-    } catch (e) {
-      t.textContent = "No se pudo activar: " + e.message;
-    }
+    } catch (e) { t.textContent = "No se pudo activar: " + e.message; }
   };
 }
-
 $("copiar").addEventListener("click", async () => {
-  try { await navigator.clipboard.writeText($("codigo-txt").value); $("copiar").textContent = "Copiado"; }
-  catch (_) { $("codigo-txt").select(); document.execCommand("copy"); $("copiar").textContent = "Copiado"; }
+  try { await navigator.clipboard.writeText($("codigo-txt").value); } catch (_) { $("codigo-txt").select(); document.execCommand("copy"); }
+  $("copiar").textContent = "Copiado";
 });
 
 cargar();
-prepararAvisos().catch((e) => { $("avisos-texto").textContent = "Error con los avisos: " + e.message; });
+prepararAvisos().catch((e) => { $("avisos-texto").textContent = "Error con los avisos: " + e.message; estadoAvisos(false, "Error"); });
 </script>
 </body>
 </html>

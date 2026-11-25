@@ -98,7 +98,8 @@ def main():
         x["visto"] = ahora
         x["modelo"] = motivo
         nuevos.append(x)
-        estado["activos"].append({k: x.get(k, "") for k in ("fuente", "titulo", "precio", "url", "entrega", "visto", "modelo", "ciudad")})
+        estado["activos"] = [a for a in estado["activos"] if a["url"] != x["url"]]
+        estado["activos"].append({k: x.get(k, "") for k in ("fuente", "titulo", "precio", "url", "entrega", "visto", "modelo", "ciudad", "distancia_km")})
 
     print(f"Nuevos que cumplen: {len(nuevos)}")
     for m, n in sorted(motivos.items(), key=lambda kv: -kv[1]):
