@@ -65,15 +65,29 @@ ESTADO_MALO_TEXTO = re.compile(
 )
 
 
+# Palabras que pueden ir antes del nombre de la consola en un título legítimo
+# ("Vendo consola Sony PS5"). Si antes aparece otra cosa ("Doom ... PS5",
+# "Patinete, se cambia por PS5"), el anuncio no es la venta de la consola.
+PREFIJO_OK = {
+    "vendo", "se", "vende", "mi", "una", "la", "el", "consola", "sony", "microsoft", "nueva", "nuevo",
+    "seminueva", "seminuevo", "como", "precintada", "precintado", "oferta", "urge", "urgente",
+    "ganga", "chollo", "pack", "playstation", "play", "station", "xbox", "one", "videoconsola",
+}
+
+
 def modelo(anuncio) -> str | None:
     t = normalizar(anuncio["titulo"])
+    if re.search(r"\bportal\b|\bcambio\b|\bcambia\b|\bintercambio\b|\bpermuto\b", t):
+        return None
     if NO_CONSOLA.search(t) and not (PS5.search(t) or XBOX_SERIES.search(t)):
         return None
-    if PS5.search(t):
-        return "PS5"
-    if XBOX_SERIES.search(t):
-        return "Xbox Series"
-    return None
+    m = PS5.search(t) or XBOX_SERIES.search(t)
+    if not m:
+        return None
+    antes = re.findall(r"[a-z0-9]+", t[: m.start()])
+    if any(w not in PREFIJO_OK for w in antes):
+        return None
+    return "PS5" if PS5.search(t) else "Xbox Series"
 
 
 CONSOLA_TOKEN = r"(ps ?5|play ?station ?5|play ?5|xbox( one)? series ?(x|s)?|series ?(x|s))"

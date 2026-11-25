@@ -22,6 +22,8 @@ ACEPTADOS = [
     a("Xbox Series S 512GB", 180, envio=False, dist=12),
     a("Play 5 con mando y juego", 340),
     a("PS5 estándar", 330, desc="Nunca ha tenido problemas. Envío por Wallapop."),
+    a("Vendo consola Sony PS5 Slim", 390),
+    a("Consola Xbox Series S Blanca", 300),
 ]
 
 RECHAZADOS = [
@@ -43,6 +45,12 @@ RECHAZADOS = [
     (a("PS5 Slim", 300, estado="aceptable"), "estado"),
     (a("Caja vacía PS5", 20), "caja vacía"),
     (a("Juego GTA V PS5", 25), "juego"),
+    # Falsos positivos vistos en la primera pasada real (Wallapop, 25/11/2026)
+    (a("Doom: The Dark Ages Edición de Coleccionista PS5", 200), "juego"),
+    (a("PlayStation Portal (PS5)", 150), "portal"),
+    (a("PS Portal PS5", 185), "portal"),
+    (a("Patinete Xiaomi 4 o se cambia por PS5", 220), "cambio"),
+    (a("iPad 10ª o intercambio posible con Xbox Series S", 280), "cambio"),
 ]
 
 

@@ -86,7 +86,7 @@ def main():
             print(f"{nombre}: ERROR {e!r}")
             errores.append(nombre)
 
-    nuevos = []
+    nuevos, motivos = [], {}
     for x in candidatos:
         clave = f"{x['fuente']}:{x['id']}:{x['precio'] or 0:.0f}"  # una bajada de precio cuenta como nuevo
         if clave in estado["vistos"]:
@@ -94,6 +94,7 @@ def main():
         ok, motivo = evaluar(x, cfg)
         estado["vistos"][clave] = ahora
         if not ok:
+            motivos[motivo] = motivos.get(motivo, 0) + 1
             continue
         d = x.get("distancia_km")
         x["entrega"] = ("Tienda con garantía" if x.get("tienda") else
@@ -105,6 +106,8 @@ def main():
         estado["activos"].append({k: x[k] for k in ("fuente", "titulo", "precio", "url", "entrega", "visto")})
 
     print(f"Nuevos que cumplen: {len(nuevos)}")
+    for m, n in sorted(motivos.items(), key=lambda kv: -kv[1]):
+        print(f"  descartados por {m}: {n}")
     if not (sin_avisos or primera_vez):
         for x in nuevos[: cfg["max_avisos_por_ejecucion"]]:
             avisar(cfg, f"{x['modelo']} · {x['precio']:.0f} € · {x['fuente']}",

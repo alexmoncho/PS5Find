@@ -18,7 +18,7 @@ Todo se ajusta en `config.json` y `filtros.py`. `python -m unittest test_filtros
 | Portal | Cómo | Fiabilidad |
 |---|---|---|
 | Wallapop | Endpoint de búsqueda que usa su web | Media: no es oficial, puede cambiar o bloquear IPs de servidores |
-| CeX | Endpoint de catálogo que usa su web | Media; tienda con garantía, pocos chollos |
+| CeX | Endpoint de catálogo que usa su web | Desactivado: responde 403 desde GitHub (`"cex": true` en `config.json` para reactivarlo) |
 | eBay | API oficial Browse | Alta; necesita claves gratuitas |
 | Vinted, Milanuncios, Back Market | No incluidos | Tienen anti-bots fuertes; usa sus alertas nativas |
 
