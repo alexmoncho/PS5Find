@@ -77,7 +77,12 @@
   "Wallapop:0j280xk30ejy:390": "2026-11-25T16:24:51.678980+00:00",
   "Wallapop:36e530gddq6d:400": "2026-11-25T16:24:51.678980+00:00",
   "Wallapop:vjrengprlwzk:280": "2026-11-25T16:24:51.678980+00:00",
-  "Wallapop:nzxe17qmye62:380": "2026-11-25T16:24:51.678980+00:00"
+  "Wallapop:nzxe17qmye62:380": "2026-11-25T16:24:51.678980+00:00",
+  "Wallapop:ejkmgyk2p9zx:260": "2026-11-25T16:32:30.078601+00:00",
+  "Wallapop:v6gpdy4qqn6e:152": "2026-11-25T16:32:30.078601+00:00",
+  "Wallapop:vjrenwrgxxzk:275": "2026-11-25T16:32:30.078601+00:00",
+  "Wallapop:pj943w52906e:375": "2026-11-25T16:32:30.078601+00:00",
+  "Wallapop:pzpkl4r054j3:350": "2026-11-25T16:32:30.078601+00:00"
  },
  "activos": [
   {
@@ -287,6 +292,26 @@
    "url": "https://es.wallapop.com/item/xbox-series-s-1327934063",
    "entrega": "En mano, 17 km",
    "visto": "2026-11-25T16:24:51.678980+00:00"
+  },
+  {
+   "fuente": "Wallapop",
+   "titulo": "Xbox Series S + 2 controladores",
+   "precio": 275.0,
+   "url": "https://es.wallapop.com/item/xbox-series-s---2-controller-1328165267",
+   "entrega": "Envío protegido",
+   "visto": "2026-11-25T16:32:30.078601+00:00",
+   "modelo": "Xbox Series",
+   "ciudad": "Budrio"
+  },
+  {
+   "fuente": "Wallapop",
+   "titulo": "Xbox Series S",
+   "precio": 350.0,
+   "url": "https://es.wallapop.com/item/xbox-series-s-1327834050",
+   "entrega": "Envío protegido",
+   "visto": "2026-11-25T16:32:30.078601+00:00",
+   "modelo": "Xbox Series",
+   "ciudad": "Santa Ponça"
   }
  ],
  "fallos": {
