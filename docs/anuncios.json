@@ -42,6 +42,30 @@
  },
  "anuncios": [
   {
+   "fuente": "Milanuncios",
+   "titulo": "PlayStation 5 Pro 2TB precintada (precio muy bajo: comprobar en mano)",
+   "precio": 500.0,
+   "url": "https://www.milanuncios.com/playstation/playstation-5-pro-2tb-sony-621652000.htm",
+   "entrega": "En mano en Madrid o envío",
+   "visto": "2026-11-25T17:49:30.169065+00:00",
+   "modelo": "PS5 Pro",
+   "ciudad": "Madrid",
+   "distancia_km": null,
+   "buen_precio": true
+  },
+  {
+   "fuente": "Milanuncios",
+   "titulo": "PlayStation 5 Pro 2TB nueva y precintada",
+   "precio": 700.0,
+   "url": "https://www.milanuncios.com/playstation/playstation-5-pro-sony-2tb-626984356.htm",
+   "entrega": "En mano en Madrid o envío",
+   "visto": "2026-11-25T17:49:30.169065+00:00",
+   "modelo": "PS5 Pro",
+   "ciudad": "Madrid",
+   "distancia_km": null,
+   "buen_precio": false
+  },
+  {
    "fuente": "Wallapop",
    "titulo": "PlayStation 5 Pro 2TB",
    "precio": 700.0,
