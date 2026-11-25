@@ -1,6 +1,6 @@
 # Rastreador de consolas para GTA VI
 
-Busca cada 30 minutos PS5 (Digital, Slim, Pro) y Xbox Series S/X de segunda mano, filtra las que cumplen los requisitos y manda una notificación al móvil con el enlace al anuncio. También genera una página (`docs/index.html`) con los anuncios válidos de los últimos 7 días.
+Busca cada 30 minutos PS5 (Digital, Slim, Pro) y Xbox Series S/X de segunda mano, filtra las que cumplen los requisitos y manda una notificación al móvil con el enlace al anuncio. La web (`docs/`, publicada con GitHub Pages) se instala en la pantalla de inicio como una app, muestra los anuncios válidos de los últimos 7 días y recibe los avisos.
 
 ## Filtros
 
@@ -26,9 +26,14 @@ Si un portal falla tres pasadas seguidas, llega un aviso.
 
 ## Puesta en marcha
 
-1. Móvil: instala **ntfy** (Play Store / App Store), pulsa "+" y suscríbete a un tema con un nombre largo e imposible de adivinar, por ejemplo `consolas-gta6-<algo-aleatorio>`. Quien conozca el nombre puede leer los avisos.
-2. GitHub: crea un repositorio (privado vale), sube esta carpeta y en *Settings → Secrets and variables → Actions* crea el secreto `NTFY_TOPIC` con ese nombre.
-3. Opcional, eBay: crea cuenta en developer.ebay.com, genera claves de producción y añade `EBAY_CLIENT_ID` y `EBAY_CLIENT_SECRET` como secretos.
-4. Opcional, web: *Settings → Pages*, rama `main`, carpeta `/docs`. En un repo privado Pages requiere plan de pago.
-5. *Actions → Rastreo de consolas → Run workflow* para la primera pasada. Esa no avisa de cada anuncio, solo de cuántos hay; desde ahí, solo los nuevos.
+1. **Repositorio público**: *Settings → General → Danger Zone → Change visibility → Public*. GitHub Pages es gratis solo en repositorios públicos. Las claves de los avisos van en secretos y no se ven.
+2. **Web**: *Settings → Pages → Build and deployment → Deploy from a branch*, rama `main`, carpeta `/docs`, *Save*. Queda en https://alexmoncho.github.io/PS5Find/
+3. **Clave de los avisos**: *Settings → Secrets and variables → Actions → New repository secret*, nombre `CLAVE_AVISOS`, valor cualquier texto largo inventado (no hace falta recordarlo). Después *Actions → Rastreo de consolas → Run workflow* para que la web reciba la clave pública.
+4. **Instalar en el móvil**: abre la web.
+   - Android (Chrome): menú ⋮ → *Instalar aplicación* o *Añadir a pantalla de inicio*.
+   - iPhone (Safari, iOS 16.4 o superior): *Compartir → Añadir a pantalla de inicio*. En iPhone los avisos solo funcionan abriendo la web desde ese icono.
+5. **Activar avisos**: desde la app instalada, pulsa *Activar avisos*, acepta el permiso y pulsa *Copiar código*. Pega ese código como nuevo secreto `SUSCRIPCIONES_AVISOS` (o pásaselo a Claude para que lo añada a `estado/suscripciones.json`).
 
+Desde la siguiente pasada te llega una notificación por cada consola nueva; al tocarla se abre el anuncio. Si cambias `CLAVE_AVISOS` o borras los datos del navegador, repite el paso 5.
+
+Opcional: claves de eBay (developer.ebay.com, claves de producción) como secretos `EBAY_CLIENT_ID` y `EBAY_CLIENT_SECRET`. También puedes recibir los avisos con la app ntfy poniendo el nombre de tu canal en el secreto `NTFY_TOPIC`.

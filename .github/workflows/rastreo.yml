@@ -21,10 +21,14 @@ jobs:
       - uses: actions/setup-python@v6
         with:
           python-version: "3.12"
-      - name: Filtros (pruebas)
-        run: python -m unittest test_filtros
+      - name: Dependencias
+        run: pip install --quiet pywebpush==2.5.0
+      - name: Pruebas
+        run: python -m unittest test_filtros test_avisos
       - name: Rastrear
         env:
+          CLAVE_AVISOS: ${{ secrets.CLAVE_AVISOS }}
+          SUSCRIPCIONES_AVISOS: ${{ secrets.SUSCRIPCIONES_AVISOS }}
           NTFY_TOPIC: ${{ secrets.NTFY_TOPIC }}
           EBAY_CLIENT_ID: ${{ secrets.EBAY_CLIENT_ID }}
           EBAY_CLIENT_SECRET: ${{ secrets.EBAY_CLIENT_SECRET }}

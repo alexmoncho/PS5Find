@@ -5,12 +5,13 @@ Uso:
   python rastreador.py --prueba     # envía una notificación de prueba y sale
   python rastreador.py --sin-avisos # busca y guarda sin notificar (útil la primera vez)
 
-Variables de entorno:
-  NTFY_TOPIC          tema de ntfy al que estás suscrito en el móvil (secreto del repositorio)
+Variables de entorno (secretos del repositorio):
+  CLAVE_AVISOS          texto largo aleatorio del que salen las claves de las notificaciones de la web
+  SUSCRIPCIONES_AVISOS  opcional, el código que copia "Activar avisos" (también vale estado/suscripciones.json)
+  NTFY_TOPIC            opcional, alternativa con la app ntfy
   EBAY_CLIENT_ID      opcional, para activar eBay
   EBAY_CLIENT_SECRET  opcional, para activar eBay
 """
-import html
 import json
 import os
 import sys
@@ -19,24 +20,24 @@ import urllib.request
 from datetime import datetime, timezone
 from pathlib import Path
 
+import avisos
 from filtros import evaluar
 from fuentes import FUENTES
 
 RAIZ = Path(__file__).parent
 ESTADO = RAIZ / "estado" / "vistos.json"
-WEB = RAIZ / "docs" / "index.html"
+WEB_DATOS = RAIZ / "docs" / "anuncios.json"
 
 
 def avisar(cfg, titulo, cuerpo, url=None, prioridad="high"):
-    topic = os.environ.get("NTFY_TOPIC")
-    if not topic:
-        print("Sin NTFY_TOPIC: no se envía el aviso ->", titulo)
-        return
-    h = {"Title": titulo.encode("utf-8"), "Priority": prioridad, "Tags": "video_game"}
-    if url:
-        h["Click"] = url
-    req = urllib.request.Request(f"{cfg['ntfy_servidor']}/{topic}", data=cuerpo.encode("utf-8"), headers=h)
-    urllib.request.urlopen(req, timeout=15).read()
+    n = avisos.enviar_webpush(titulo, cuerpo, url)
+    try:
+        ntfy = avisos.enviar_ntfy(cfg["ntfy_servidor"], titulo, cuerpo, url, prioridad)
+    except Exception as e:
+        print(f"ntfy: error {e!r}")
+        ntfy = False
+    if not n and not ntfy:
+        print("Sin avisos configurados (CLAVE_AVISOS + suscripción, o NTFY_TOPIC) ->", titulo)
 
 
 def cargar_estado():
@@ -45,23 +46,15 @@ def cargar_estado():
     return {"vistos": {}, "activos": []}
 
 
-def guardar_web(activos):
-    filas = "\n".join(
-        f"<tr><td>{html.escape(x['fuente'])}</td><td><a href=\"{html.escape(x['url'])}\">"
-        f"{html.escape(x['titulo'])}</a></td><td>{x['precio']:.0f} €</td>"
-        f"<td>{html.escape(x.get('entrega', ''))}</td><td>{html.escape(x['visto'][:16].replace('T', ' '))}</td></tr>"
-        for x in sorted(activos, key=lambda x: x["visto"], reverse=True)
-    )
-    WEB.parent.mkdir(exist_ok=True)
-    WEB.write_text(f"""<!doctype html><html lang="es"><head><meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1"><title>Consolas GTA VI</title>
-<style>body{{font-family:system-ui,sans-serif;margin:16px;background:#fff;color:#111}}
-table{{border-collapse:collapse;width:100%}}td,th{{padding:6px;border-bottom:1px solid #ddd;text-align:left;font-size:14px}}
-@media (prefers-color-scheme:dark){{body{{background:#111;color:#eee}}a{{color:#8bf}}td,th{{border-color:#333}}}}</style>
-</head><body><h1>Consolas para GTA VI</h1><p>Anuncios que cumplen los filtros (últimos 7 días).
-Actualizado: {datetime.now(timezone.utc).strftime('%Y-%m-%d %H:%M')} UTC</p>
-<table><tr><th>Portal</th><th>Anuncio</th><th>Precio</th><th>Entrega</th><th>Visto</th></tr>
-{filas}</table></body></html>""")
+def guardar_web(activos, errores):
+    """Datos que lee la web (docs/index.html): anuncios activos y hora de la última pasada."""
+    WEB_DATOS.parent.mkdir(exist_ok=True)
+    WEB_DATOS.write_text(json.dumps({
+        "actualizado": datetime.now(timezone.utc).isoformat(timespec="seconds"),
+        "portales_con_error": errores,
+        "anuncios": sorted(activos, key=lambda x: x["visto"], reverse=True),
+    }, ensure_ascii=False, indent=1))
+    avisos.publicar_clave_publica()
 
 
 def main():
@@ -105,7 +98,7 @@ def main():
         x["visto"] = ahora
         x["modelo"] = motivo
         nuevos.append(x)
-        estado["activos"].append({k: x[k] for k in ("fuente", "titulo", "precio", "url", "entrega", "visto")})
+        estado["activos"].append({k: x.get(k, "") for k in ("fuente", "titulo", "precio", "url", "entrega", "visto", "modelo", "ciudad")})
 
     print(f"Nuevos que cumplen: {len(nuevos)}")
     for m, n in sorted(motivos.items(), key=lambda kv: -kv[1]):
@@ -138,7 +131,7 @@ def main():
 
     ESTADO.parent.mkdir(exist_ok=True)
     ESTADO.write_text(json.dumps(estado, ensure_ascii=False, indent=1))
-    guardar_web(estado["activos"])
+    guardar_web(estado["activos"], errores)
 
 
 if __name__ == "__main__":
