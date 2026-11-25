@@ -1,20 +1,6 @@
 {
- "actualizado": "2026-11-25T17:24:06+00:00",
+ "actualizado": "2026-11-25T17:39:25+00:00",
  "portales_con_error": [],
- "anuncios": [
-  {
-   "fuente": "Wallapop",
-   "titulo": "PlayStation 5 Slim 1TB con caja",
-   "precio": 345.0,
-   "url": "https://es.wallapop.com/item/playstation-5-slim-1tb-con-caja-1328167836",
-   "entrega": "Envío protegido",
-   "visto": "2026-11-25T16:52:50.879357+00:00",
-   "modelo": "PS5",
-   "ciudad": "Huesca",
-   "distancia_km": 335.33854032618825,
-   "buen_precio": true
-  }
- ],
  "modelos": {
   "Xbox Series S": {
    "buen_precio": 220,
@@ -53,5 +39,43 @@
    "min": 120,
    "nota": "sin decir S o X: se aplica el máximo de la Series S"
   }
- }
+ },
+ "anuncios": [
+  {
+   "fuente": "Wallapop",
+   "titulo": "PlayStation 5 Pro 2TB",
+   "precio": 700.0,
+   "url": "https://es.wallapop.com/item/playstation-5-pro-2tb-1328154549",
+   "entrega": "Envío protegido",
+   "visto": "2026-11-25T17:39:09.150187+00:00",
+   "modelo": "PS5 Pro",
+   "ciudad": "Alaejos",
+   "distancia_km": 160.97020259062495,
+   "buen_precio": false
+  },
+  {
+   "fuente": "Wallapop",
+   "titulo": "Xbox Series S (mirar descripción)",
+   "precio": 130.0,
+   "url": "https://es.wallapop.com/item/xbox-series-s-mirar-descripcion-1328174312",
+   "entrega": "Envío protegido",
+   "visto": "2026-11-25T17:39:09.150187+00:00",
+   "modelo": "Xbox Series S",
+   "ciudad": "Murcia",
+   "distancia_km": 348.2735943988991,
+   "buen_precio": true
+  },
+  {
+   "fuente": "Wallapop",
+   "titulo": "PlayStation 5 Slim 1TB con caja",
+   "precio": 345.0,
+   "url": "https://es.wallapop.com/item/playstation-5-slim-1tb-con-caja-1328167836",
+   "entrega": "Envío protegido",
+   "visto": "2026-11-25T16:52:50.879357+00:00",
+   "modelo": "PS5",
+   "ciudad": "Huesca",
+   "distancia_km": 335.33854032618825,
+   "buen_precio": true
+  }
+ ]
 }
