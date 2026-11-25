@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-25T22:29:55+00:00",
+ "actualizado": "2026-11-25T23:26:56+00:00",
  "portales_con_error": [],
  "modelos": {
   "Xbox Series S": {
@@ -41,6 +41,18 @@
   }
  },
  "anuncios": [
+  {
+   "fuente": "Wallapop",
+   "titulo": "PS5 Pro",
+   "precio": 629.0,
+   "url": "https://es.wallapop.com/item/ps5-pro-1328294268",
+   "entrega": "Envío protegido",
+   "visto": "2026-11-25T23:26:38.007383+00:00",
+   "modelo": "PS5 Pro",
+   "ciudad": "San Cristóbal de La Laguna",
+   "distancia_km": 1755.116042604,
+   "buen_precio": true
+  },
   {
    "fuente": "Wallapop",
    "titulo": "PS5 Pro",
