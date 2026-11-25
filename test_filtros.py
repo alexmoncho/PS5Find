@@ -60,6 +60,8 @@ RECHAZADOS = [
     (a("Patinete Xiaomi 4 o se cambia por PS5", 220), "cambio"),
     (a("iPad 10ª o intercambio posible con Xbox Series S", 280), "cambio"),
     (a("Xbox Series S + 2 controladores", 230, pais="IT"), "Italia (Budrio)"),
+    (a("Xbox Series S (mirar descripción)", 130), "mirar descripción"),
+    (a("PS5 Slim", 300, desc="Ver bien la descripción antes de preguntar"), "ver descripción"),
 ]
 
 

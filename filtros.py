@@ -48,7 +48,7 @@ AVERIA = re.compile(
 ESTAFA = re.compile(
     r"foto de la caja|solo la caja|solo caja|caja vacia|es una foto|se vende la foto|"
     r"vendo la foto|imagen de la consola|no es la consola|leer bien|leer descripcion|"
-    r"lee bien|lee la descripcion|leed bien|"
+    r"lee bien|leed bien|\b(mira|mirad|mirar|ver|lee|leed|leer)( bien)?( la)? descripcion|"
     r"whatsapp|whats app|wasap|telegram|"
     r"transferencia|pago por adelantado|pago adelantado|western union|paypal amigos|"
     r"amigos y familiares|solo bizum|bizum antes|"
