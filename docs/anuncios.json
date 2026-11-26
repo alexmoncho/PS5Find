@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-26T17:02:24+00:00",
+ "actualizado": "2026-11-26T18:16:55+00:00",
  "portales_con_error": [],
  "modelos": {
   "Xbox Series S": {
@@ -41,6 +41,18 @@
   }
  },
  "anuncios": [
+  {
+   "fuente": "Wallapop",
+   "titulo": "Xbox Series X 1TB",
+   "precio": 450.0,
+   "url": "https://es.wallapop.com/item/xbox-series-x-1tb-1328531160",
+   "entrega": "En mano, 13 km",
+   "visto": "2026-11-26T18:16:37.629499+00:00",
+   "modelo": "Xbox Series X",
+   "ciudad": "Getafe",
+   "distancia_km": 12.721420932645051,
+   "buen_precio": false
+  },
   {
    "fuente": "Wallapop",
    "titulo": "Consola PlayStation 5 (PS5) con lector de disco",
