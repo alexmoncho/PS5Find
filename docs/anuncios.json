@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-26T12:33:55+00:00",
+ "actualizado": "2026-11-26T14:19:23+00:00",
  "portales_con_error": [],
  "modelos": {
   "Xbox Series S": {
@@ -41,6 +41,18 @@
   }
  },
  "anuncios": [
+  {
+   "fuente": "Wallapop",
+   "titulo": "Xbox Series S+mando scuff+mando original con bat",
+   "precio": 250.0,
+   "url": "https://es.wallapop.com/item/xbox-series-s-mando-scuff-mando-original-con-bat-1328428494",
+   "entrega": "Envío protegido",
+   "visto": "2026-11-26T14:19:05.501044+00:00",
+   "modelo": "Xbox Series S",
+   "ciudad": "Barcelona",
+   "distancia_km": 504.8116812867026,
+   "buen_precio": false
+  },
   {
    "fuente": "Wallapop",
    "titulo": "PS5 Pro",
