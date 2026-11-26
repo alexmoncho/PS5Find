@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-26T15:32:14+00:00",
+ "actualizado": "2026-11-26T17:02:24+00:00",
  "portales_con_error": [],
  "modelos": {
   "Xbox Series S": {
@@ -41,6 +41,18 @@
   }
  },
  "anuncios": [
+  {
+   "fuente": "Wallapop",
+   "titulo": "Consola PlayStation 5 (PS5) con lector de disco",
+   "precio": 420.0,
+   "url": "https://es.wallapop.com/item/consola-playstation-5-ps5-con-lector-de-disco-1328509551",
+   "entrega": "En mano, 1 km",
+   "visto": "2026-11-26T17:02:07.209311+00:00",
+   "modelo": "PS5 Estándar",
+   "ciudad": "Madrid",
+   "distancia_km": 0.7981799745510127,
+   "buen_precio": true
+  },
   {
    "fuente": "Wallapop",
    "titulo": "PS5 Pro",
