@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-26T22:53:22+00:00",
+ "actualizado": "2026-11-26T23:52:59+00:00",
  "portales_con_error": [],
  "modelos": {
   "Xbox Series S": {
@@ -41,6 +41,42 @@
   }
  },
  "anuncios": [
+  {
+   "fuente": "Wallapop",
+   "titulo": "Consola PlayStation 5 (PS5)",
+   "precio": 400.0,
+   "url": "https://es.wallapop.com/item/consola-playstation-5-ps5-1328633451",
+   "entrega": "Envío protegido",
+   "visto": "2026-11-26T23:52:38.589835+00:00",
+   "modelo": "PS5 Estándar",
+   "ciudad": "Murcia",
+   "distancia_km": 349.64628806953357,
+   "buen_precio": true
+  },
+  {
+   "fuente": "Wallapop",
+   "titulo": "Consola PlayStation 5 (PS5) digital",
+   "precio": 400.0,
+   "url": "https://es.wallapop.com/item/consola-playstation-5-ps5-digital-1328629592",
+   "entrega": "Envío protegido",
+   "visto": "2026-11-26T23:52:38.589835+00:00",
+   "modelo": "PS5 Digital",
+   "ciudad": "Ponferrada",
+   "distancia_km": 338.18851287089626,
+   "buen_precio": false
+  },
+  {
+   "fuente": "Wallapop",
+   "titulo": "PS5 Slim (PlayStation 5) con lector 1TB",
+   "precio": 400.0,
+   "url": "https://es.wallapop.com/item/ps5-slim-playstation-5-con-lector-1tb-1328628411",
+   "entrega": "Envío protegido",
+   "visto": "2026-11-26T23:52:38.589835+00:00",
+   "modelo": "PS5 Estándar",
+   "ciudad": "Las Palmas de Gran Canaria",
+   "distancia_km": 1739.3222563211664,
+   "buen_precio": true
+  },
   {
    "fuente": "Wallapop",
    "titulo": "Xbox Series X 1TB Negra",
