@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-26T20:51:45+00:00",
+ "actualizado": "2026-11-26T21:50:44+00:00",
  "portales_con_error": [],
  "modelos": {
   "Xbox Series S": {
@@ -41,6 +41,18 @@
   }
  },
  "anuncios": [
+  {
+   "fuente": "Wallapop",
+   "titulo": "Consola PlayStation 5 (PS5)",
+   "precio": 300.0,
+   "url": "https://es.wallapop.com/item/consola-playstation-5-ps5-1328608207",
+   "entrega": "Envío protegido",
+   "visto": "2026-11-26T21:50:27.438867+00:00",
+   "modelo": "PS5",
+   "ciudad": "San Fernando",
+   "distancia_km": 1777.6243697625916,
+   "buen_precio": true
+  },
   {
    "fuente": "Wallapop",
    "titulo": "Xbox Series X 1TB",
