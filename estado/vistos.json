@@ -430,7 +430,21 @@
   "Wallapop:4z48w54n0wjy:750": "2026-11-26T02:51:23.222143+00:00",
   "Wallapop:0j280vdn8vjy:535": "2026-11-26T02:51:23.222143+00:00",
   "Wallapop:8j387q9gk7z9:450": "2026-11-26T02:51:23.222143+00:00",
-  "Wallapop:36e53ykvpq6d:375": "2026-11-26T02:51:23.222143+00:00"
+  "Wallapop:36e53ykvpq6d:375": "2026-11-26T02:51:23.222143+00:00",
+  "Wallapop:0j280vdvgejy:432": "2026-11-26T03:55:01.986242+00:00",
+  "Wallapop:4z48w545o8jy:350": "2026-11-26T03:55:01.986242+00:00",
+  "Wallapop:8z88o70dxrz3:600": "2026-11-26T03:55:01.986242+00:00",
+  "Wallapop:wzvgwo8po4zl:421": "2026-11-26T03:55:01.986242+00:00",
+  "Wallapop:0j280vdx9rjy:139": "2026-11-26T03:55:01.986242+00:00",
+  "Wallapop:8z88o70338z3:461": "2026-11-26T03:55:01.986242+00:00",
+  "Wallapop:0j280vd78ejy:510": "2026-11-26T03:55:01.986242+00:00",
+  "Wallapop:wzyrmk817p65:410": "2026-11-26T03:55:01.986242+00:00",
+  "Wallapop:v6gpdyqx0n6e:400": "2026-11-26T03:55:01.986242+00:00",
+  "Wallapop:xzogypq4l2j9:505": "2026-11-26T03:55:01.986242+00:00",
+  "Wallapop:e65qxn5k8m6o:445": "2026-11-26T03:55:01.986242+00:00",
+  "Wallapop:vjrenw88k8zk:380": "2026-11-26T03:55:01.986242+00:00",
+  "Wallapop:p618pg201dz5:480": "2026-11-26T03:55:01.986242+00:00",
+  "Wallapop:e65qxn5olg6o:200": "2026-11-26T03:55:01.986242+00:00"
  },
  "activos": [
   {
@@ -563,6 +577,78 @@
    "modelo": "PS5 Pro",
    "ciudad": "San Cristóbal de La Laguna",
    "distancia_km": 1755.116042604,
+   "buen_precio": true
+  },
+  {
+   "fuente": "Wallapop",
+   "titulo": "Sony PlayStation 5 Pro",
+   "precio": 600.0,
+   "url": "https://es.wallapop.com/item/sony-playstation-5-pro-1328317546",
+   "entrega": "Envío protegido",
+   "visto": "2026-11-26T03:55:01.986242+00:00",
+   "modelo": "PS5 Pro",
+   "ciudad": "Arroyomolinos",
+   "distancia_km": 249.58821656140108,
+   "buen_precio": true
+  },
+  {
+   "fuente": "Wallapop",
+   "titulo": "Consola Sony PlayStation 5 Pro",
+   "precio": 510.0,
+   "url": "https://es.wallapop.com/item/consola-sony-playstation-5-pro-1328316635",
+   "entrega": "En mano, 1 km",
+   "visto": "2026-11-26T03:55:01.986242+00:00",
+   "modelo": "PS5 Pro",
+   "ciudad": "Madrid",
+   "distancia_km": 0.552100422904906,
+   "buen_precio": true
+  },
+  {
+   "fuente": "Wallapop",
+   "titulo": "PS5 (PlayStation 5) Slim Digital 1TB",
+   "precio": 410.0,
+   "url": "https://es.wallapop.com/item/ps5-playstation-5-slim-digital-1tb-1328316568",
+   "entrega": "Envío protegido",
+   "visto": "2026-11-26T03:55:01.986242+00:00",
+   "modelo": "PS5 Digital",
+   "ciudad": "Alicante/Alacant",
+   "distancia_km": 360.7663589737742,
+   "buen_precio": false
+  },
+  {
+   "fuente": "Wallapop",
+   "titulo": "PlayStation 5 (PS5) Slim 1TB",
+   "precio": 400.0,
+   "url": "https://es.wallapop.com/item/playstation-5-ps5-slim-1tb-1328316516",
+   "entrega": "Envío protegido",
+   "visto": "2026-11-26T03:55:01.986242+00:00",
+   "modelo": "PS5",
+   "ciudad": "Málaga",
+   "distancia_km": 415.26927090266577,
+   "buen_precio": false
+  },
+  {
+   "fuente": "Wallapop",
+   "titulo": "PS5 Slim 1TB con lector y un mando",
+   "precio": 445.0,
+   "url": "https://es.wallapop.com/item/ps5-slim-1tb-con-lector-y-un-mando-1328316024",
+   "entrega": "Envío protegido",
+   "visto": "2026-11-26T03:55:01.986242+00:00",
+   "modelo": "PS5 Estándar",
+   "ciudad": "Lomo de La Herradura",
+   "distancia_km": 1748.389595351093,
+   "buen_precio": false
+  },
+  {
+   "fuente": "Wallapop",
+   "titulo": "PlayStation 5",
+   "precio": 380.0,
+   "url": "https://es.wallapop.com/item/guantes-de-moto-suomy-para-dama-1328315367",
+   "entrega": "Envío protegido",
+   "visto": "2026-11-26T03:55:01.986242+00:00",
+   "modelo": "PS5",
+   "ciudad": "Sevilla",
+   "distancia_km": 391.0402113618839,
    "buen_precio": true
   }
  ],
