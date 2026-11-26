@@ -418,7 +418,19 @@
   "Wallapop:qzmmq5w3q1zv:650": "2026-11-26T01:53:45.010701+00:00",
   "Wallapop:wzyrmk840p65:375": "2026-11-26T01:53:45.010701+00:00",
   "Wallapop:pzpkl0q9d4j3:345": "2026-11-26T01:53:45.010701+00:00",
-  "Wallapop:wzyrmk02v265:395": "2026-11-26T01:53:45.010701+00:00"
+  "Wallapop:wzyrmk02v265:395": "2026-11-26T01:53:45.010701+00:00",
+  "Wallapop:wzvgwo88vrzl:210": "2026-11-26T02:51:23.222143+00:00",
+  "Wallapop:wzyrmk88np65:290": "2026-11-26T02:51:23.222143+00:00",
+  "Wallapop:4z48w5432vjy:629": "2026-11-26T02:51:23.222143+00:00",
+  "Wallapop:4z48w543emjy:185": "2026-11-26T02:51:23.222143+00:00",
+  "Wallapop:v6gpdyqn456e:199": "2026-11-26T02:51:23.222143+00:00",
+  "Wallapop:9jdwoyqmp26k:510": "2026-11-26T02:51:23.222143+00:00",
+  "Wallapop:ejkmgyqe11zx:700": "2026-11-26T02:51:23.222143+00:00",
+  "Wallapop:v6gpdyq7ln6e:500": "2026-11-26T02:51:23.222143+00:00",
+  "Wallapop:4z48w54n0wjy:750": "2026-11-26T02:51:23.222143+00:00",
+  "Wallapop:0j280vdn8vjy:535": "2026-11-26T02:51:23.222143+00:00",
+  "Wallapop:8j387q9gk7z9:450": "2026-11-26T02:51:23.222143+00:00",
+  "Wallapop:36e53ykvpq6d:375": "2026-11-26T02:51:23.222143+00:00"
  },
  "activos": [
   {
@@ -536,6 +548,18 @@
    "url": "https://es.wallapop.com/item/ps5-pro-1328304428",
    "entrega": "Envío protegido",
    "visto": "2026-11-26T01:53:45.010701+00:00",
+   "modelo": "PS5 Pro",
+   "ciudad": "San Cristóbal de La Laguna",
+   "distancia_km": 1755.116042604,
+   "buen_precio": true
+  },
+  {
+   "fuente": "Wallapop",
+   "titulo": "PS5 Pro",
+   "precio": 629.0,
+   "url": "https://es.wallapop.com/item/ps5-pro-1328313914",
+   "entrega": "Envío protegido",
+   "visto": "2026-11-26T02:51:23.222143+00:00",
    "modelo": "PS5 Pro",
    "ciudad": "San Cristóbal de La Laguna",
    "distancia_km": 1755.116042604,
