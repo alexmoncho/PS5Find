@@ -469,7 +469,26 @@
   "Wallapop:mzn3rn1l0kjn:520": "2026-11-26T06:25:19.000874+00:00",
   "Wallapop:wzyrmkplg265:600": "2026-11-26T06:25:19.000874+00:00",
   "Wallapop:ejkmgy72l9zx:490": "2026-11-26T06:25:19.000874+00:00",
-  "Wallapop:w67vm05g7w6x:425": "2026-11-26T06:25:19.000874+00:00"
+  "Wallapop:w67vm05g7w6x:425": "2026-11-26T06:25:19.000874+00:00",
+  "Wallapop:vjrenw5rr4zk:390": "2026-11-26T07:55:57.893498+00:00",
+  "Wallapop:pzpkl0ery5j3:650": "2026-11-26T07:55:57.893498+00:00",
+  "Wallapop:qjwrx3wd9e6o:440": "2026-11-26T07:55:57.893498+00:00",
+  "Wallapop:qzmmq5d4wozv:410": "2026-11-26T07:55:57.893498+00:00",
+  "Wallapop:v6gpdyx4p76e:700": "2026-11-26T07:55:57.893498+00:00",
+  "Wallapop:3zlmvy2e7qjx:520": "2026-11-26T07:55:57.893498+00:00",
+  "Wallapop:nz08neo5536o:640": "2026-11-26T07:55:57.893498+00:00",
+  "Wallapop:mzn3rn1y10jn:500": "2026-11-26T07:55:57.893498+00:00",
+  "Wallapop:p618pg3wv7z5:600": "2026-11-26T07:55:57.893498+00:00",
+  "Wallapop:w67vm05o996x:699": "2026-11-26T07:55:57.893498+00:00",
+  "Wallapop:pj943wppg06e:135": "2026-11-26T07:55:57.893498+00:00",
+  "Wallapop:wzyrmkp8g565:180": "2026-11-26T07:55:57.893498+00:00",
+  "Wallapop:nzxe12n92562:625": "2026-11-26T07:55:57.893498+00:00",
+  "Wallapop:xzogypm0l7j9:530": "2026-11-26T07:55:57.893498+00:00",
+  "Wallapop:ejkmgy7r21zx:630": "2026-11-26T07:55:57.893498+00:00",
+  "Wallapop:36e53y4ovn6d:600": "2026-11-26T07:55:57.893498+00:00",
+  "Wallapop:nzxe12nqp162:247": "2026-11-26T07:55:57.893498+00:00",
+  "Wallapop:4z48w594gljy:700": "2026-11-26T07:55:57.893498+00:00",
+  "Wallapop:v6gpdyoq426e:420": "2026-11-26T07:55:57.893498+00:00"
  },
  "activos": [
   {
@@ -698,6 +717,30 @@
    "modelo": "PS5",
    "ciudad": "Sevilla",
    "distancia_km": 391.2752294706075,
+   "buen_precio": false
+  },
+  {
+   "fuente": "Wallapop",
+   "titulo": "PlayStation 5 Slim",
+   "precio": 390.0,
+   "url": "https://es.wallapop.com/item/playstation-5-slim-1328336743",
+   "entrega": "Envío protegido",
+   "visto": "2026-11-26T07:55:57.893498+00:00",
+   "modelo": "PS5",
+   "ciudad": "Cádiz",
+   "distancia_km": 486.7820905530215,
+   "buen_precio": false
+  },
+  {
+   "fuente": "Wallapop",
+   "titulo": "PlayStation 5 Slim 1TB",
+   "precio": 410.0,
+   "url": "https://es.wallapop.com/item/playstation-5-slim-1tb-1328335832",
+   "entrega": "Envío protegido",
+   "visto": "2026-11-26T07:55:57.893498+00:00",
+   "modelo": "PS5",
+   "ciudad": "Santiago de Compostela",
+   "distancia_km": 486.4582642307966,
    "buen_precio": false
   }
  ],
