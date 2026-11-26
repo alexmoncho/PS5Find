@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-26T14:19:23+00:00",
+ "actualizado": "2026-11-26T15:32:14+00:00",
  "portales_con_error": [],
  "modelos": {
   "Xbox Series S": {
@@ -41,6 +41,30 @@
   }
  },
  "anuncios": [
+  {
+   "fuente": "Wallapop",
+   "titulo": "PS5 Pro",
+   "precio": 629.0,
+   "url": "https://es.wallapop.com/item/ps5-pro-1328465530",
+   "entrega": "Envío protegido",
+   "visto": "2026-11-26T15:31:55.752839+00:00",
+   "modelo": "PS5 Pro",
+   "ciudad": "San Cristóbal de La Laguna",
+   "distancia_km": 1755.116042604,
+   "buen_precio": true
+  },
+  {
+   "fuente": "Wallapop",
+   "titulo": "Xbox Series X|S 007 First Light Legacy Edition",
+   "precio": 299.0,
+   "url": "https://es.wallapop.com/item/xbox-series-x-s-007-first-light-legacy-edition-1328469829",
+   "entrega": "Envío protegido",
+   "visto": "2026-11-26T15:31:55.752839+00:00",
+   "modelo": "Xbox Series X",
+   "ciudad": "Águilas",
+   "distancia_km": 381.3187173397189,
+   "buen_precio": true
+  },
   {
    "fuente": "Wallapop",
    "titulo": "Xbox Series S+mando scuff+mando original con bat",
