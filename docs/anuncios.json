@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-26T09:00:15+00:00",
+ "actualizado": "2026-11-26T10:13:12+00:00",
  "portales_con_error": [],
  "modelos": {
   "Xbox Series S": {
@@ -41,6 +41,30 @@
   }
  },
  "anuncios": [
+  {
+   "fuente": "Wallapop",
+   "titulo": "PS5 Pro",
+   "precio": 629.0,
+   "url": "https://es.wallapop.com/item/ps5-pro-1328381141",
+   "entrega": "Envío protegido",
+   "visto": "2026-11-26T10:12:54.642074+00:00",
+   "modelo": "PS5 Pro",
+   "ciudad": "San Cristóbal de La Laguna",
+   "distancia_km": 1755.116042604,
+   "buen_precio": true
+  },
+  {
+   "fuente": "Wallapop",
+   "titulo": "PS5 Slim 1TB",
+   "precio": 345.0,
+   "url": "https://es.wallapop.com/item/ps5-slim-1tb-1328367875",
+   "entrega": "Envío protegido",
+   "visto": "2026-11-26T10:12:54.642074+00:00",
+   "modelo": "PS5",
+   "ciudad": "Almería",
+   "distancia_km": 411.13586844684363,
+   "buen_precio": true
+  },
   {
    "fuente": "Wallapop",
    "titulo": "PlayStation 5 Slim",
