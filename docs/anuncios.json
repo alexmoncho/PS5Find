@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-26T21:50:44+00:00",
+ "actualizado": "2026-11-26T22:53:22+00:00",
  "portales_con_error": [],
  "modelos": {
   "Xbox Series S": {
@@ -41,6 +41,18 @@
   }
  },
  "anuncios": [
+  {
+   "fuente": "Wallapop",
+   "titulo": "Xbox Series X 1TB Negra",
+   "precio": 340.0,
+   "url": "https://es.wallapop.com/item/xbox-series-x-1tb-negra-1328626887",
+   "entrega": "Envío protegido",
+   "visto": "2026-11-26T22:53:04.449248+00:00",
+   "modelo": "Xbox Series X",
+   "ciudad": "Sóller",
+   "distancia_km": 551.2805360434487,
+   "buen_precio": true
+  },
   {
    "fuente": "Wallapop",
    "titulo": "Consola PlayStation 5 (PS5)",
