@@ -1118,7 +1118,18 @@
   "Wallapop:p618pr2pd5z5:300": "2026-11-27T03:56:38.370337+00:00",
   "Wallapop:qzmmql8qygzv:387": "2026-11-27T03:56:38.370337+00:00",
   "Wallapop:pzpklpqn05j3:401": "2026-11-27T03:56:38.370337+00:00",
-  "Wallapop:vjren78048zk:675": "2026-11-27T03:56:38.370337+00:00"
+  "Wallapop:vjren78048zk:675": "2026-11-27T03:56:38.370337+00:00",
+  "Wallapop:xzogynmgkwj9:699": "2026-11-27T05:04:17.157575+00:00",
+  "Wallapop:w67vmw5goy6x:370": "2026-11-27T05:04:17.157575+00:00",
+  "Wallapop:mzn3r51vxyjn:390": "2026-11-27T05:04:17.157575+00:00",
+  "Wallapop:pj9431py126e:450": "2026-11-27T05:04:17.157575+00:00",
+  "Wallapop:ejkmgl74nyzx:380": "2026-11-27T05:04:17.157575+00:00",
+  "Wallapop:vjren72dm8zk:550": "2026-11-27T05:04:17.157575+00:00",
+  "Wallapop:e65qx0kyr06o:390": "2026-11-27T05:04:17.157575+00:00",
+  "Wallapop:vjren72d4xzk:420": "2026-11-27T05:04:17.157575+00:00",
+  "Wallapop:w67vmw53176x:525": "2026-11-27T05:04:17.157575+00:00",
+  "Wallapop:nz08nqogye6o:300": "2026-11-27T05:04:17.157575+00:00",
+  "Wallapop:wzvgwmeyp7zl:500": "2026-11-27T05:04:17.157575+00:00"
  },
  "activos": [
   {
@@ -1540,6 +1551,90 @@
    "ciudad": "Palencia",
    "distancia_km": 190.21125369675883,
    "buen_precio": false
+  },
+  {
+   "fuente": "Wallapop",
+   "titulo": "Consola PlayStation 5 (PS5) Slim",
+   "precio": 370.0,
+   "url": "https://es.wallapop.com/item/consola-playstation-5-ps5-slim-1328654428",
+   "entrega": "Envío protegido",
+   "visto": "2026-11-27T05:04:17.157575+00:00",
+   "modelo": "PS5",
+   "ciudad": "Alicante/Alacant",
+   "distancia_km": 359.9368695666328,
+   "buen_precio": true
+  },
+  {
+   "fuente": "Wallapop",
+   "titulo": "PlayStation 5 Slim (PS5)",
+   "precio": 390.0,
+   "url": "https://es.wallapop.com/item/playstation-5-slim-ps5-1328654373",
+   "entrega": "En mano, 1 km",
+   "visto": "2026-11-27T05:04:17.157575+00:00",
+   "modelo": "PS5",
+   "ciudad": "Madrid",
+   "distancia_km": 1.1208672298201827,
+   "buen_precio": false
+  },
+  {
+   "fuente": "Wallapop",
+   "titulo": "Sony PlayStation 5 Slim Disco + Accesorios",
+   "precio": 450.0,
+   "url": "https://es.wallapop.com/item/sony-playstation-5-slim-disco---accesorios-1328653937",
+   "entrega": "Envío protegido",
+   "visto": "2026-11-27T05:04:17.157575+00:00",
+   "modelo": "PS5 Estándar",
+   "ciudad": "Sevilla",
+   "distancia_km": 392.0758824016373,
+   "buen_precio": false
+  },
+  {
+   "fuente": "Wallapop",
+   "titulo": "Consola PlayStation 5 Slim 1TB",
+   "precio": 380.0,
+   "url": "https://es.wallapop.com/item/consola-playstation-5-slim-1tb-1328653771",
+   "entrega": "Envío protegido",
+   "visto": "2026-11-27T05:04:17.157575+00:00",
+   "modelo": "PS5",
+   "ciudad": "Bilbao",
+   "distancia_km": 322.5079002458108,
+   "buen_precio": true
+  },
+  {
+   "fuente": "Wallapop",
+   "titulo": "PlayStation 5 Slim 1TB",
+   "precio": 390.0,
+   "url": "https://es.wallapop.com/item/playstation-5-slim-1tb-1328653700",
+   "entrega": "Envío protegido",
+   "visto": "2026-11-27T05:04:17.157575+00:00",
+   "modelo": "PS5",
+   "ciudad": "Murcia",
+   "distancia_km": 349.4459641409824,
+   "buen_precio": false
+  },
+  {
+   "fuente": "Wallapop",
+   "titulo": "PlayStation 5 Slim 1TB",
+   "precio": 420.0,
+   "url": "https://es.wallapop.com/item/playstation-5-slim-1tb-1328653619",
+   "entrega": "Envío protegido",
+   "visto": "2026-11-27T05:04:17.157575+00:00",
+   "modelo": "PS5",
+   "ciudad": "Barcelona",
+   "distancia_km": 505.0564237895838,
+   "buen_precio": false
+  },
+  {
+   "fuente": "Wallapop",
+   "titulo": "Consola PlayStation 5 (PS5)",
+   "precio": 300.0,
+   "url": "https://es.wallapop.com/item/consola-playstation-5-ps5-1328653099",
+   "entrega": "En mano, 29 km",
+   "visto": "2026-11-27T05:04:17.157575+00:00",
+   "modelo": "PS5",
+   "ciudad": "Casarrubuelos",
+   "distancia_km": 28.899986535598664,
+   "buen_precio": true
   }
  ],
  "fallos": {
