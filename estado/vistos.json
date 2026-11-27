@@ -1114,7 +1114,11 @@
   "Wallapop:x6qq508qon6y:750": "2026-11-27T02:35:50.746739+00:00",
   "Wallapop:3zlmvl7vmpjx:575": "2026-11-27T02:35:50.746739+00:00",
   "Wallapop:nz08nq3lne6o:400": "2026-11-27T02:35:50.746739+00:00",
-  "Wallapop:qjwrxo8dw46o:395": "2026-11-27T02:35:50.746739+00:00"
+  "Wallapop:qjwrxo8dw46o:395": "2026-11-27T02:35:50.746739+00:00",
+  "Wallapop:p618pr2pd5z5:300": "2026-11-27T03:56:38.370337+00:00",
+  "Wallapop:qzmmql8qygzv:387": "2026-11-27T03:56:38.370337+00:00",
+  "Wallapop:pzpklpqn05j3:401": "2026-11-27T03:56:38.370337+00:00",
+  "Wallapop:vjren78048zk:675": "2026-11-27T03:56:38.370337+00:00"
  },
  "activos": [
   {
@@ -1512,6 +1516,30 @@
    "ciudad": "Las Palmas de Gran Canaria",
    "distancia_km": 1739.3222563211664,
    "buen_precio": true
+  },
+  {
+   "fuente": "Wallapop",
+   "titulo": "Ps5 Slim 1TB",
+   "precio": 300.0,
+   "url": "https://es.wallapop.com/item/ventilador-de-pie-maxoferta-blanco-1328651407",
+   "entrega": "En mano, 1 km",
+   "visto": "2026-11-27T03:56:38.370337+00:00",
+   "modelo": "PS5",
+   "ciudad": "Madrid",
+   "distancia_km": 0.5756840929747818,
+   "buen_precio": true
+  },
+  {
+   "fuente": "Wallapop",
+   "titulo": "Sony PlayStation 5 Pro (PS5 Pro)",
+   "precio": 675.0,
+   "url": "https://es.wallapop.com/item/sony-playstation-5-pro-ps5-pro-1328650743",
+   "entrega": "Envío protegido",
+   "visto": "2026-11-27T03:56:38.370337+00:00",
+   "modelo": "PS5 Pro",
+   "ciudad": "Palencia",
+   "distancia_km": 190.21125369675883,
+   "buen_precio": false
   }
  ],
  "fallos": {

@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-27T02:36:06+00:00",
+ "actualizado": "2026-11-27T03:56:58+00:00",
  "portales_con_error": [],
  "modelos": {
   "Xbox Series S": {
@@ -41,6 +41,30 @@
   }
  },
  "anuncios": [
+  {
+   "fuente": "Wallapop",
+   "titulo": "Ps5 Slim 1TB",
+   "precio": 300.0,
+   "url": "https://es.wallapop.com/item/ventilador-de-pie-maxoferta-blanco-1328651407",
+   "entrega": "En mano, 1 km",
+   "visto": "2026-11-27T03:56:38.370337+00:00",
+   "modelo": "PS5",
+   "ciudad": "Madrid",
+   "distancia_km": 0.5756840929747818,
+   "buen_precio": true
+  },
+  {
+   "fuente": "Wallapop",
+   "titulo": "Sony PlayStation 5 Pro (PS5 Pro)",
+   "precio": 675.0,
+   "url": "https://es.wallapop.com/item/sony-playstation-5-pro-ps5-pro-1328650743",
+   "entrega": "Envío protegido",
+   "visto": "2026-11-27T03:56:38.370337+00:00",
+   "modelo": "PS5 Pro",
+   "ciudad": "Palencia",
+   "distancia_km": 190.21125369675883,
+   "buen_precio": false
+  },
   {
    "fuente": "Wallapop",
    "titulo": "Consola PlayStation 5 (PS5)",
