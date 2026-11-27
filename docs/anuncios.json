@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-27T12:31:41+00:00",
+ "actualizado": "2026-11-27T14:19:23+00:00",
  "portales_con_error": [],
  "modelos": {
   "Xbox Series S": {
@@ -41,6 +41,30 @@
   }
  },
  "anuncios": [
+  {
+   "fuente": "Wallapop",
+   "titulo": "PlayStation 5 Pro 2TB",
+   "precio": 750.0,
+   "url": "https://es.wallapop.com/item/playstation-5-pro-2tb-1328797110",
+   "entrega": "Envío protegido",
+   "visto": "2026-11-27T14:19:05.103795+00:00",
+   "modelo": "PS5 Pro",
+   "ciudad": "Coín",
+   "distancia_km": 428.0851747539113,
+   "buen_precio": false
+  },
+  {
+   "fuente": "Wallapop",
+   "titulo": "Consola Sony PlayStation 5 Pro (PS5 Pro)",
+   "precio": 650.0,
+   "url": "https://es.wallapop.com/item/consola-sony-playstation-5-pro-ps5-pro-1328777713",
+   "entrega": "Envío protegido",
+   "visto": "2026-11-27T14:19:05.103795+00:00",
+   "modelo": "PS5 Pro",
+   "ciudad": "Castellón de la Plana/Castelló de la Plana",
+   "distancia_km": 314.3712343575246,
+   "buen_precio": true
+  },
   {
    "fuente": "Wallapop",
    "titulo": "Ps5 Slim 1TB",
