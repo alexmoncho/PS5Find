@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-27T22:54:10+00:00",
+ "actualizado": "2026-11-27T23:49:13+00:00",
  "portales_con_error": [],
  "modelos": {
   "Xbox Series S": {
@@ -41,6 +41,30 @@
   }
  },
  "anuncios": [
+  {
+   "fuente": "Wallapop",
+   "titulo": "PlayStation 5 (PS5) Digital Edition",
+   "precio": 360.0,
+   "url": "https://es.wallapop.com/item/playstation-5-ps5-digital-edition-1328941723",
+   "entrega": "Envío protegido",
+   "visto": "2026-11-27T23:48:55.007202+00:00",
+   "modelo": "PS5 Digital",
+   "ciudad": "Málaga",
+   "distancia_km": 415.7205122934023,
+   "buen_precio": true
+  },
+  {
+   "fuente": "Wallapop",
+   "titulo": "Xbox Series S Blanca",
+   "precio": 250.0,
+   "url": "https://es.wallapop.com/item/xbox-series-s-blanca-1328940688",
+   "entrega": "Envío protegido",
+   "visto": "2026-11-27T23:48:55.007202+00:00",
+   "modelo": "Xbox Series S",
+   "ciudad": "Sant Antoni de Portmany",
+   "distancia_km": 457.39323913568285,
+   "buen_precio": false
+  },
   {
    "fuente": "Wallapop",
    "titulo": "PlayStation 5 Slim",
