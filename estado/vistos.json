@@ -1129,7 +1129,16 @@
   "Wallapop:vjren72d4xzk:420": "2026-11-27T05:04:17.157575+00:00",
   "Wallapop:w67vmw53176x:525": "2026-11-27T05:04:17.157575+00:00",
   "Wallapop:nz08nqogye6o:300": "2026-11-27T05:04:17.157575+00:00",
-  "Wallapop:wzvgwmeyp7zl:500": "2026-11-27T05:04:17.157575+00:00"
+  "Wallapop:wzvgwmeyp7zl:500": "2026-11-27T05:04:17.157575+00:00",
+  "Wallapop:nz08nqolqe6o:695": "2026-11-27T06:28:57.619217+00:00",
+  "Wallapop:e65qx0kd9p6o:635": "2026-11-27T06:28:57.619217+00:00",
+  "Wallapop:p618pr31x7z5:675": "2026-11-27T06:28:57.619217+00:00",
+  "Wallapop:8j387ndo08z9:655": "2026-11-27T06:28:57.619217+00:00",
+  "Wallapop:v6gpdl5kq76e:475": "2026-11-27T06:28:57.619217+00:00",
+  "Wallapop:9jdwol9mrd6k:650": "2026-11-27T06:28:57.619217+00:00",
+  "Wallapop:x6qq5034go6y:440": "2026-11-27T06:28:57.619217+00:00",
+  "Wallapop:p618pr3ky2z5:420": "2026-11-27T06:28:57.619217+00:00",
+  "Wallapop:mzn3r51wl2jn:700": "2026-11-27T06:28:57.619217+00:00"
  },
  "activos": [
   {
@@ -1634,6 +1643,18 @@
    "modelo": "PS5",
    "ciudad": "Casarrubuelos",
    "distancia_km": 28.899986535598664,
+   "buen_precio": true
+  },
+  {
+   "fuente": "Wallapop",
+   "titulo": "PlayStation 5 Slim 1TB con Disco",
+   "precio": 420.0,
+   "url": "https://es.wallapop.com/item/playstation-5-slim-1tb-con-disco-1328657007",
+   "entrega": "Envío protegido",
+   "visto": "2026-11-27T06:28:57.619217+00:00",
+   "modelo": "PS5 Estándar",
+   "ciudad": "Oviedo",
+   "distancia_km": 372.4059561454703,
    "buen_precio": true
   }
  ],
