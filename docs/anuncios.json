@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-27T09:02:28+00:00",
+ "actualizado": "2026-11-27T10:30:03+00:00",
  "portales_con_error": [],
  "modelos": {
   "Xbox Series S": {
@@ -41,6 +41,18 @@
   }
  },
  "anuncios": [
+  {
+   "fuente": "Wallapop",
+   "titulo": "PlayStation 5 Slim 1TB con lector",
+   "precio": 435.0,
+   "url": "https://es.wallapop.com/item/playstation-5-slim-1tb-con-lector-1328714103",
+   "entrega": "Envío protegido",
+   "visto": "2026-11-27T10:29:45.196523+00:00",
+   "modelo": "PS5 Estándar",
+   "ciudad": "Benidorm",
+   "distancia_km": 371.0798485442053,
+   "buen_precio": false
+  },
   {
    "fuente": "Wallapop",
    "titulo": "PS5 Slim 1TB ( con factura )",
