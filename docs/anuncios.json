@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-27T20:54:19+00:00",
+ "actualizado": "2026-11-27T21:52:53+00:00",
  "portales_con_error": [],
  "modelos": {
   "Xbox Series S": {
@@ -41,6 +41,30 @@
   }
  },
  "anuncios": [
+  {
+   "fuente": "Wallapop",
+   "titulo": "PlayStation 5 Slim",
+   "precio": 380.0,
+   "url": "https://es.wallapop.com/item/playstation-5-slim-1328927054",
+   "entrega": "Envío protegido",
+   "visto": "2026-11-27T21:52:34.614382+00:00",
+   "modelo": "PS5",
+   "ciudad": "Zaragoza",
+   "distancia_km": 274.30108264633066,
+   "buen_precio": true
+  },
+  {
+   "fuente": "Wallapop",
+   "titulo": "Consola PlayStation 5 (PS5) con 1 mando",
+   "precio": 400.0,
+   "url": "https://es.wallapop.com/item/consola-playstation-5-ps5-con-1-mando-1328925741",
+   "entrega": "Envío protegido",
+   "visto": "2026-11-27T21:52:34.614382+00:00",
+   "modelo": "PS5",
+   "ciudad": "Palencia",
+   "distancia_km": 189.94177941450826,
+   "buen_precio": false
+  },
   {
    "fuente": "Wallapop",
    "titulo": "PS5 (PlayStation 5) 1TB Formato Físico",
