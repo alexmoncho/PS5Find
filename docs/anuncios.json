@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-27T14:19:23+00:00",
+ "actualizado": "2026-11-27T15:29:02+00:00",
  "portales_con_error": [],
  "modelos": {
   "Xbox Series S": {
@@ -41,6 +41,30 @@
   }
  },
  "anuncios": [
+  {
+   "fuente": "Wallapop",
+   "titulo": "PS5 (PlayStation 5) 1TB Formato Físico",
+   "precio": 400.0,
+   "url": "https://es.wallapop.com/item/ps5-playstation-5-1tb-formato-fisico-1328820302",
+   "entrega": "Envío protegido",
+   "visto": "2026-11-27T15:28:43.664878+00:00",
+   "modelo": "PS5 Estándar",
+   "ciudad": "Cáceres",
+   "distancia_km": 250.0255112197079,
+   "buen_precio": true
+  },
+  {
+   "fuente": "Wallapop",
+   "titulo": "Xbox Series X Negra",
+   "precio": 220.0,
+   "url": "https://es.wallapop.com/item/xbox-series-x-negra-1328816374",
+   "entrega": "Envío protegido",
+   "visto": "2026-11-27T15:28:43.664878+00:00",
+   "modelo": "Xbox Series X",
+   "ciudad": "Güímar",
+   "distancia_km": 1776.5423549686109,
+   "buen_precio": true
+  },
   {
    "fuente": "Wallapop",
    "titulo": "PlayStation 5 Pro 2TB",
