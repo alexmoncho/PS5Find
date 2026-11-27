@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-27T10:30:03+00:00",
+ "actualizado": "2026-11-27T11:27:23+00:00",
  "portales_con_error": [],
  "modelos": {
   "Xbox Series S": {
@@ -41,6 +41,30 @@
   }
  },
  "anuncios": [
+  {
+   "fuente": "Wallapop",
+   "titulo": "PlayStation 5 Pro 2TB",
+   "precio": 730.0,
+   "url": "https://es.wallapop.com/item/playstation-5-pro-2tb-1328739734",
+   "entrega": "Envío protegido",
+   "visto": "2026-11-27T11:27:04.139423+00:00",
+   "modelo": "PS5 Pro",
+   "ciudad": "Elx/Elche",
+   "distancia_km": 351.98975361794777,
+   "buen_precio": false
+  },
+  {
+   "fuente": "Wallapop",
+   "titulo": "Xbox Series S 512GB",
+   "precio": 250.0,
+   "url": "https://es.wallapop.com/item/xbox-series-s-512gb-1328738358",
+   "entrega": "Envío protegido",
+   "visto": "2026-11-27T11:27:04.139423+00:00",
+   "modelo": "Xbox Series S",
+   "ciudad": "Cieza",
+   "distancia_km": 311.5045807289151,
+   "buen_precio": false
+  },
   {
    "fuente": "Wallapop",
    "titulo": "PlayStation 5 Slim 1TB con lector",
