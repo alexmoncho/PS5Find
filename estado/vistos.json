@@ -1157,7 +1157,32 @@
   "Wallapop:0j2805d7qejy:710": "2026-11-27T07:56:37.997863+00:00",
   "Wallapop:nzxe1kxg4m62:750": "2026-11-27T07:56:37.997863+00:00",
   "Wallapop:nzxe1k03de62:415": "2026-11-27T07:56:37.997863+00:00",
-  "Wallapop:3zlmvlggw8jx:300": "2026-11-27T07:56:37.997863+00:00"
+  "Wallapop:3zlmvlggw8jx:300": "2026-11-27T07:56:37.997863+00:00",
+  "Wallapop:e65qx0ow7m6o:130": "2026-11-27T09:02:11.099674+00:00",
+  "Wallapop:e65qx0ong06o:345": "2026-11-27T09:02:11.099674+00:00",
+  "Wallapop:xzogyn99x7j9:349": "2026-11-27T09:02:11.099674+00:00",
+  "Wallapop:xzogyn99l2j9:650": "2026-11-27T09:02:11.099674+00:00",
+  "Wallapop:x6qq50eggq6y:700": "2026-11-27T09:02:11.099674+00:00",
+  "Wallapop:xzogyn94g7j9:210": "2026-11-27T09:02:11.099674+00:00",
+  "Wallapop:x6qq50eooq6y:550": "2026-11-27T09:02:11.099674+00:00",
+  "Wallapop:vjren7gxm4zk:700": "2026-11-27T09:02:11.099674+00:00",
+  "Wallapop:qjwrxo01rg6o:750": "2026-11-27T09:02:11.099674+00:00",
+  "Wallapop:ejkmglo511zx:750": "2026-11-27T09:02:11.099674+00:00",
+  "Wallapop:qjwrxo07qw6o:690": "2026-11-27T09:02:11.099674+00:00",
+  "Wallapop:ejkmglop3yzx:639": "2026-11-27T09:02:11.099674+00:00",
+  "Wallapop:8j387n1ed2z9:150": "2026-11-27T09:02:11.099674+00:00",
+  "Wallapop:0j2805xr5djy:190": "2026-11-27T09:02:11.099674+00:00",
+  "Wallapop:w67vmw2ge86x:750": "2026-11-27T09:02:11.099674+00:00",
+  "Wallapop:3zlmvl2vgpjx:649": "2026-11-27T09:02:11.099674+00:00",
+  "Wallapop:mzn3r5k15kjn:575": "2026-11-27T09:02:11.099674+00:00",
+  "Wallapop:ejkmgl301yzx:750": "2026-11-27T09:02:11.099674+00:00",
+  "Wallapop:pj9431203v6e:450": "2026-11-27T09:02:11.099674+00:00",
+  "Wallapop:vjren75m08zk:600": "2026-11-27T09:02:11.099674+00:00",
+  "Wallapop:wzvgwmpk5qzl:215": "2026-11-27T09:02:11.099674+00:00",
+  "Wallapop:qjwrxo01pg6o:420": "2026-11-27T09:02:11.099674+00:00",
+  "Wallapop:e65qx01x1g6o:450": "2026-11-27T09:02:11.099674+00:00",
+  "Wallapop:xzogyn3nnwj9:410": "2026-11-27T09:02:11.099674+00:00",
+  "Wallapop:nz08nqvyxv6o:250": "2026-11-27T09:02:11.099674+00:00"
  },
  "activos": [
   {
@@ -1674,6 +1699,18 @@
    "modelo": "PS5 Estándar",
    "ciudad": "Oviedo",
    "distancia_km": 372.4059561454703,
+   "buen_precio": true
+  },
+  {
+   "fuente": "Wallapop",
+   "titulo": "PS5 Slim 1TB ( con factura )",
+   "precio": 345.0,
+   "url": "https://es.wallapop.com/item/ps5-slim-1tb-con-factura-1328690996",
+   "entrega": "Envío protegido",
+   "visto": "2026-11-27T09:02:11.099674+00:00",
+   "modelo": "PS5",
+   "ciudad": "Toledo",
+   "distancia_km": 67.17355439759766,
    "buen_precio": true
   }
  ],

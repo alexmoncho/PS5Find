@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-27T07:56:54+00:00",
+ "actualizado": "2026-11-27T09:02:28+00:00",
  "portales_con_error": [],
  "modelos": {
   "Xbox Series S": {
@@ -41,6 +41,18 @@
   }
  },
  "anuncios": [
+  {
+   "fuente": "Wallapop",
+   "titulo": "PS5 Slim 1TB ( con factura )",
+   "precio": 345.0,
+   "url": "https://es.wallapop.com/item/ps5-slim-1tb-con-factura-1328690996",
+   "entrega": "Envío protegido",
+   "visto": "2026-11-27T09:02:11.099674+00:00",
+   "modelo": "PS5",
+   "ciudad": "Toledo",
+   "distancia_km": 67.17355439759766,
+   "buen_precio": true
+  },
   {
    "fuente": "Wallapop",
    "titulo": "PlayStation 5 Slim 1TB con Disco",
