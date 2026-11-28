@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-28T04:56:33+00:00",
+ "actualizado": "2026-11-28T05:55:59+00:00",
  "portales_con_error": [],
  "modelos": {
   "Xbox Series S": {
@@ -41,6 +41,18 @@
   }
  },
  "anuncios": [
+  {
+   "fuente": "Wallapop",
+   "titulo": "Consola Sony PlayStation 5 (PS5) CD",
+   "precio": 420.0,
+   "url": "https://es.wallapop.com/item/consola-sony-playstation-5-ps5-cd-1328965530",
+   "entrega": "Envío protegido",
+   "visto": "2026-11-28T05:55:41.818871+00:00",
+   "modelo": "PS5",
+   "ciudad": "Bilbao",
+   "distancia_km": 321.6539258918963,
+   "buen_precio": false
+  },
   {
    "fuente": "Wallapop",
    "titulo": "PS5 PORTABLE",
