@@ -1771,7 +1771,8 @@
   "Wallapop:nz08n5l4q76o:555": "2026-11-28T03:52:07.526745+00:00",
   "Wallapop:xzogy51275j9:169": "2026-11-28T03:52:07.526745+00:00",
   "Wallapop:8z88omlk41z3:500": "2026-11-28T03:52:07.526745+00:00",
-  "Wallapop:nz08n5l2336o:120": "2026-11-28T03:52:07.526745+00:00"
+  "Wallapop:nz08n5l2336o:120": "2026-11-28T03:52:07.526745+00:00",
+  "Wallapop:w67vm1ll7y6x:200": "2026-11-28T04:56:15.642151+00:00"
  },
  "activos": [
   {
@@ -2493,6 +2494,18 @@
    "ciudad": "Málaga",
    "distancia_km": 416.48643125801857,
    "buen_precio": false
+  },
+  {
+   "fuente": "Wallapop",
+   "titulo": "PS5 PORTABLE",
+   "precio": 200.0,
+   "url": "https://es.wallapop.com/item/ps5-portable-1328964676",
+   "entrega": "Envío protegido",
+   "visto": "2026-11-28T04:56:15.642151+00:00",
+   "modelo": "PS5",
+   "ciudad": "Alcañiz",
+   "distancia_km": 309.2893621268796,
+   "buen_precio": true
   }
  ],
  "fallos": {

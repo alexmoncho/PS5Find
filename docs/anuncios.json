@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-28T03:52:23+00:00",
+ "actualizado": "2026-11-28T04:56:33+00:00",
  "portales_con_error": [],
  "modelos": {
   "Xbox Series S": {
@@ -41,6 +41,18 @@
   }
  },
  "anuncios": [
+  {
+   "fuente": "Wallapop",
+   "titulo": "PS5 PORTABLE",
+   "precio": 200.0,
+   "url": "https://es.wallapop.com/item/ps5-portable-1328964676",
+   "entrega": "Envío protegido",
+   "visto": "2026-11-28T04:56:15.642151+00:00",
+   "modelo": "PS5",
+   "ciudad": "Alcañiz",
+   "distancia_km": 309.2893621268796,
+   "buen_precio": true
+  },
   {
    "fuente": "Wallapop",
    "titulo": "PS5 Slim 1TB (PlayStation 5)",
