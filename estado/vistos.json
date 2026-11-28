@@ -1733,7 +1733,17 @@
   "Wallapop:v6gpd9nl556e:250": "2026-11-27T23:48:55.007202+00:00",
   "Wallapop:qjwrxkv03g6o:550": "2026-11-27T23:48:55.007202+00:00",
   "Wallapop:4z48w734mwjy:200": "2026-11-27T23:48:55.007202+00:00",
-  "Wallapop:p618pn1287z5:250": "2026-11-27T23:48:55.007202+00:00"
+  "Wallapop:p618pn1287z5:250": "2026-11-27T23:48:55.007202+00:00",
+  "Wallapop:3zlmvqpnlpjx:392": "2026-11-28T01:02:25.596851+00:00",
+  "Wallapop:qzmmqr0p8lzv:400": "2026-11-28T01:02:25.596851+00:00",
+  "Wallapop:4z48w72nwrjy:530": "2026-11-28T01:02:25.596851+00:00",
+  "Wallapop:xzogy5wxl7j9:375": "2026-11-28T01:02:25.596851+00:00",
+  "Wallapop:8z88ompgv1z3:340": "2026-11-28T01:02:25.596851+00:00",
+  "Wallapop:e65qxwdyl06o:220": "2026-11-28T01:02:25.596851+00:00",
+  "Wallapop:mzn3ry7lpkjn:450": "2026-11-28T01:02:25.596851+00:00",
+  "Wallapop:vjren0mr0wzk:600": "2026-11-28T01:02:25.596851+00:00",
+  "Wallapop:ejkmgvn9nqzx:450": "2026-11-28T01:02:25.596851+00:00",
+  "Wallapop:pj943o0krm6e:600": "2026-11-28T01:02:25.596851+00:00"
  },
  "activos": [
   {
@@ -2418,6 +2428,18 @@
    "modelo": "Xbox Series S",
    "ciudad": "Sant Antoni de Portmany",
    "distancia_km": 457.39323913568285,
+   "buen_precio": false
+  },
+  {
+   "fuente": "Wallapop",
+   "titulo": "Consola PlayStation 5 (PS5) Blanca",
+   "precio": 400.0,
+   "url": "https://es.wallapop.com/item/consola-playstation-5-ps5-blanca-1328948156",
+   "entrega": "Envío protegido",
+   "visto": "2026-11-28T01:02:25.596851+00:00",
+   "modelo": "PS5",
+   "ciudad": "Novelda",
+   "distancia_km": 338.7092492677482,
    "buen_precio": false
   }
  ],
