@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-28T01:02:42+00:00",
+ "actualizado": "2026-11-28T02:31:24+00:00",
  "portales_con_error": [],
  "modelos": {
   "Xbox Series S": {
@@ -41,6 +41,30 @@
   }
  },
  "anuncios": [
+  {
+   "fuente": "Wallapop",
+   "titulo": "PS5 Slim 1TB (PlayStation 5)",
+   "precio": 390.0,
+   "url": "https://es.wallapop.com/item/ps5-slim-1tb-playstation-5-1328954346",
+   "entrega": "Envío protegido",
+   "visto": "2026-11-28T02:31:05.614858+00:00",
+   "modelo": "PS5",
+   "ciudad": "Valladolid",
+   "distancia_km": 163.06805950569586,
+   "buen_precio": false
+  },
+  {
+   "fuente": "Wallapop",
+   "titulo": "PlayStation 5 Slim 1TB",
+   "precio": 420.0,
+   "url": "https://es.wallapop.com/item/playstation-5-slim-1tb-1328954231",
+   "entrega": "Envío protegido",
+   "visto": "2026-11-28T02:31:05.614858+00:00",
+   "modelo": "PS5",
+   "ciudad": "Málaga",
+   "distancia_km": 416.48643125801857,
+   "buen_precio": false
+  },
   {
    "fuente": "Wallapop",
    "titulo": "Consola PlayStation 5 (PS5) Blanca",

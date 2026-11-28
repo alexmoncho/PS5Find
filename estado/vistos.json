@@ -1743,7 +1743,30 @@
   "Wallapop:mzn3ry7lpkjn:450": "2026-11-28T01:02:25.596851+00:00",
   "Wallapop:vjren0mr0wzk:600": "2026-11-28T01:02:25.596851+00:00",
   "Wallapop:ejkmgvn9nqzx:450": "2026-11-28T01:02:25.596851+00:00",
-  "Wallapop:pj943o0krm6e:600": "2026-11-28T01:02:25.596851+00:00"
+  "Wallapop:pj943o0krm6e:600": "2026-11-28T01:02:25.596851+00:00",
+  "Wallapop:8j3870ler7z9:120": "2026-11-28T02:31:05.614858+00:00",
+  "Wallapop:36e532rd7k6d:370": "2026-11-28T02:31:05.614858+00:00",
+  "Wallapop:36e532r9dq6d:575": "2026-11-28T02:31:05.614858+00:00",
+  "Wallapop:4z48w72w4ljy:575": "2026-11-28T02:31:05.614858+00:00",
+  "Wallapop:8z88ompmloz3:160": "2026-11-28T02:31:05.614858+00:00",
+  "Wallapop:8z88ompx2dz3:390": "2026-11-28T02:31:05.614858+00:00",
+  "Wallapop:p618pnmryxz5:420": "2026-11-28T02:31:05.614858+00:00",
+  "Wallapop:x6qq5p179n6y:600": "2026-11-28T02:31:05.614858+00:00",
+  "Wallapop:pj943o02r06e:505": "2026-11-28T02:31:05.614858+00:00",
+  "Wallapop:pj943o024v6e:520": "2026-11-28T02:31:05.614858+00:00",
+  "Wallapop:mzn3ry7k8kjn:535": "2026-11-28T02:31:05.614858+00:00",
+  "Wallapop:4z48w729qljy:240": "2026-11-28T02:31:05.614858+00:00",
+  "Wallapop:4z48w724rljy:719": "2026-11-28T02:31:05.614858+00:00",
+  "Wallapop:wzvgw1d8yqzl:600": "2026-11-28T02:31:05.614858+00:00",
+  "Wallapop:4z48w72lxwjy:350": "2026-11-28T02:31:05.614858+00:00",
+  "Wallapop:pj943o005v6e:129": "2026-11-28T02:31:05.614858+00:00",
+  "Wallapop:w67vm1n9vy6x:599": "2026-11-28T02:31:05.614858+00:00",
+  "Wallapop:qjwrxkg97q6o:430": "2026-11-28T02:31:05.614858+00:00",
+  "Wallapop:nz08n51d0v6o:479": "2026-11-28T02:31:05.614858+00:00",
+  "Wallapop:qzmmqr0p8lzv:450": "2026-11-28T02:31:05.614858+00:00",
+  "Wallapop:xzogy5w045j9:655": "2026-11-28T02:31:05.614858+00:00",
+  "Wallapop:nz08n51oge6o:450": "2026-11-28T02:31:05.614858+00:00",
+  "Wallapop:xzogy57lx4j9:650": "2026-11-28T02:31:05.614858+00:00"
  },
  "activos": [
   {
@@ -2440,6 +2463,30 @@
    "modelo": "PS5",
    "ciudad": "Novelda",
    "distancia_km": 338.7092492677482,
+   "buen_precio": false
+  },
+  {
+   "fuente": "Wallapop",
+   "titulo": "PS5 Slim 1TB (PlayStation 5)",
+   "precio": 390.0,
+   "url": "https://es.wallapop.com/item/ps5-slim-1tb-playstation-5-1328954346",
+   "entrega": "Envío protegido",
+   "visto": "2026-11-28T02:31:05.614858+00:00",
+   "modelo": "PS5",
+   "ciudad": "Valladolid",
+   "distancia_km": 163.06805950569586,
+   "buen_precio": false
+  },
+  {
+   "fuente": "Wallapop",
+   "titulo": "PlayStation 5 Slim 1TB",
+   "precio": 420.0,
+   "url": "https://es.wallapop.com/item/playstation-5-slim-1tb-1328954231",
+   "entrega": "Envío protegido",
+   "visto": "2026-11-28T02:31:05.614858+00:00",
+   "modelo": "PS5",
+   "ciudad": "Málaga",
+   "distancia_km": 416.48643125801857,
    "buen_precio": false
   }
  ],
